@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course Page</title>
+  <link rel="stylesheet" href="course_overview.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+
+<!-- Navbar -->
+  <header class="sticky-top z-index-fixed">
+  <nav class="navbar navbar-dark navbar-expand-md">
+    <div class="container-fluid">
+      <!-- brand (left) -->
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="ConfideoIT.png" alt="CIS Logo" height="40" />
+      </a>
+
+      <!-- hamburger (right) -->
+      <button class="navbar-toggler ms-auto" type="button"
+              data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- links -->
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <!-- your li/a items -->
+           <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="courses.html">Courses</a></li>
+        <!-- Dropdown for Services -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle text-white"
+   href="#services"
+   id="servicesDropdown"
+   role="button"
+   data-bs-toggle="dropdown"
+   aria-expanded="false"
+   onclick="document.querySelector('#services').scrollIntoView({behavior: 'smooth'});">
+   Services
+</a>
+      <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                <li><a class="dropdown-item" href="implementation.html">Implementation</a></li>
+
+        <li><a class="dropdown-item" href="training.html">Training</a></li>
+        <li><a class="dropdown-item" href="internship.html">Internships</a></li>
+        <li><a class="dropdown-item" href="workshops.html">Workshops</a></li>
+        <li><a class="dropdown-item" href="realtime-projects.html">Real Time Projects</a></li>
+      </ul>
+    </li>
+        <li class="nav-item"><a class="nav-link text-white" href="index.html">Clients</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="blog.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="contact.html">ContactUs</a></li>
+    
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+
+  <!-- Banner -->
+  <section class="banner">
+    <div class="banner-left">
+      <h1>Google Cloud Platform (GCP)</h1>
+      <p>"Master Google Cloud Platform (GCP) and accelerate your career in cloud computing. Learn how to build, deploy, and manage scalable applications on one of the world’s most powerful cloud platforms."</p>
+       <!-- Buttons -->
+    <div class="button-container">
+    <button class="btn btn-primary">
+      <a href="tel:+918179886658" class="btn btn-primary">
+        <i class="fa-solid fa-phone"></i> Talk to Advisor
+      </a>   
+      </button>
+
+    <button class="btn btn-secondary" id="downloadBtn">
+        <i class="fa-solid fa-file-arrow-down"></i> Download Brochure
+      </button>
+    </div>
+    </div>
+    
+    <div class="banner-right">
+      <video controls>
+        <source src="GCP intro.mp4" type="video/mp4">
+        Your browser does not support video.
+      </video>
+    </div>
+  </section>
+<!-- Modal -->
+<div id="popupForm" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <!-- Load popupform.html here -->
+    <!-- <iframe src="popUpForm.html" id="formFrame"></iframe> -->
+     <iframe src="popUpForm.html?file=GCP.pdf" id="formFrame"></iframe>
+
+  </div>
+</div>
+
+<script>
+  const modal = document.getElementById("popupForm");
+  const btn = document.getElementById("downloadBtn");
+  const closeBtn = document.querySelector(".close");
+
+  // Show popup
+  btn.onclick = () => {
+    modal.style.display = "flex";
+  };
+
+  // Close popup
+  closeBtn.onclick = () => {
+    modal.style.display = "none";
+  };
+
+  // Close on outside click
+  window.onclick = (e) => {
+    if (e.target == modal) {
+      modal.style.display = "none";
+    }
+  };
+</script>
+
+<style>
+/* Modal overlay */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal content box */
+.modal-content {
+  background: #fff;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 600px;
+  height: 80%;
+  position: relative;
+  padding: 20px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.3);
+}
+
+/* Close button */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Iframe to load external form */
+#formFrame {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+</style>
+
+
+
+  <!-- stats-section -->
+   <section class="stats-section">
+  <div class="stats-container">
+    <div class="stat-box">
+      <h2>32%</h2>
+      <p>Market Share</p>
+    </div>
+    <div class="stat-box">
+      <h2>₹15L</h2>
+      <p>Avg. Salary</p>
+    </div>
+    <div class="stat-box">
+      <h2>1M+</h2>
+      <p>Job Openings</p>
+    </div>
+    <div class="stat-box">
+      <h2>95%</h2>
+      <p>Placement Rate</p>
+    </div>
+  </div>
+</section>
+
+
+  <!-- key features -->
+ <h2 class="section-title">Key Features</h2>
+
+  <div class="features-container">
+
+    <div class="feature-card card1">
+      <i class="fa-solid fa-bullseye"></i>
+      <h3>Industry Expert Instructors</h3>
+      <!-- <p>Learn from AWS-certified professionals with 10+ years of real-world experience.</p> -->
+    </div>
+
+    <div class="feature-card card2">
+      <i class="fa-solid fa-graduation-cap"></i>
+      <h3>Certification Support</h3>
+      <!-- <p>Preparation for AWS Architect, Developer, and SysOps certifications.</p> -->
+    </div>
+
+    <div class="feature-card card3">
+      <i class="fa-solid fa-briefcase"></i>
+      <h3>100% Placement Support</h3>
+      <!-- <p>Resume building, interview prep, and job placements with top companies.</p> -->
+    </div>
+
+    <div class="feature-card card4">
+      <i class="fa-solid fa-clock"></i>
+      <h3>Flexible Learning</h3>
+      <!-- <p>Weekend and weekday batches with lifetime access to course materials.</p> -->
+    </div>
+
+    <div class="feature-card card5">
+      <i class="fa-solid fa-handshake"></i>
+      <h3>Industry Projects</h3>
+      <!-- <p>Work on real-world projects and gain hands-on business experience.</p> -->
+    </div>
+
+    <div class="feature-card card6">
+      <i class="fa-solid fa-user-graduate"></i>
+      <h3>Career Mentorship</h3>
+      <!-- <p>One-on-one mentoring sessions to guide your cloud career path.</p> -->
+    </div>
+
+  </div>
+
+
+  <!-- course-overview -->
+   <h2 class="section-title">Course Overview</h2>
+
+  <div class="overview-container">
+    
+    <div class="overview-card">
+      <i class="fa-solid fa-cloud"></i>
+      <h3>What is GCP?</h3>
+      <p>Google Cloud Platform (GCP) is a suite of cloud computing services offered by Google, providing infrastructure, storage, networking, machine learning, and application development tools. It enables businesses to innovate faster and scale globally with Google’s secure infrastructure.</p>
+    </div>
+
+    <div class="overview-card">
+      <i class="fa-solid fa-chart-line"></i>
+      <h3>Why Choose GCP?</h3>
+      <p>GCP is one of the fastest-growing cloud providers, known for its AI and data analytics strengths. With demand increasing across industries, GCP certifications can help you secure roles with salaries ranging from ₹7–22 LPA in cloud engineering and data-driven careers.</p>
+    </div>
+
+  </div>
+
+  <!-- keys-skills -->
+<h2 class="section-title">Key Skills You'll Master</h2>
+
+<div class="skills-container">
+  <div class="skill-card">
+    <strong>GCP Fundamentals</strong>
+    <span>Regions, Zones, Global Infrastructure</span>
+  </div>
+
+  <div class="skill-card">
+    <strong>Core Services</strong>
+    <span>Compute Engine, Cloud Storage, Cloud SQL, Firestore</span>
+  </div>
+
+  <div class="skill-card">
+    <strong>Networking</strong>
+    <span>VPC, Load Balancing, Cloud DNS</span>
+  </div>
+
+  <div class="skill-card">
+    <strong>Serverless Computing</strong>
+    <span>Cloud Functions, Pub/Sub</span>
+  </div>
+
+  <div class="skill-card">
+    <strong>Security & Identity</strong>
+    <span>IAM, Cloud KMS, Firewall Rules</span>
+  </div>
+
+  <div class="skill-card">
+    <strong>Automation</strong>
+    <span>Deployment Manager, Cloud SDK</span>
+  </div>
+
+  <div class="skill-card">
+    <strong>Monitoring & Logging</strong>
+    <span>Cloud Monitoring, Cloud Logging</span>
+  </div>
+
+  <div class="skill-card">
+    <strong>Networking Security</strong>
+    <span>Shared VPC, Private Google Access</span>
+  </div>
+</div>
+
+
+<!-- essential-tools -->
+<!-- essential-tools -->
+<section class="tools-section">
+  <div class="container">
+    <h2 class="section-title">Essential Tools You'll Learn</h2>
+    <div class="tools-grid">
+
+      <!-- Card 1 -->
+      <div class="card">
+        <i class="fa-solid fa-gear" style="font-size:50px; color:#f59e0b;"></i>
+        <h3>Management Tools</h3>
+        <ul>
+          <li>Google Cloud Console</li>
+          <li>Cloud SDK (gcloud CLI)</li>
+          <li>Deployment Manager</li>
+        </ul>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card">
+        <i class="fa-solid fa-database" style="font-size:50px; color:#8b5cf6;"></i>
+        <h3>Core Services</h3>
+        <ul>
+          <li>Compute Engine</li>
+          <li>Cloud Storage</li>
+          <li>Cloud SQL</li>
+          <li>Firestore</li>
+        </ul>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card">
+        <i class="fa-solid fa-network-wired" style="font-size:50px; color:#3b82f6;"></i>
+        <h3>Networking Tools</h3>
+        <ul>
+          <li>VPC & Firewall Rules</li>
+          <li>Load Balancing</li>
+          <li>Cloud DNS</li>
+          <li>Shared VPC</li>
+        </ul>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="card">
+        <i class="fa-solid fa-shield-halved" style="font-size:50px; color:#ef4444;"></i>
+        <h3>Security Tools</h3>
+        <ul>
+          <li>Identity & Access Management (IAM)</li>
+          <li>Cloud KMS</li>
+          <li>Private Google Access</li>
+        </ul>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="card">
+        <i class="fa-solid fa-chart-line" style="font-size:50px; color:#10b981;"></i>
+        <h3>Monitoring Tools</h3>
+        <ul>
+          <li>Cloud Monitoring</li>
+          <li>Cloud Logging</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- course-syllabus -->
+ <section class="syllabus-section">
+  <h2 class="section-title">Course Syllabus</h2>
+  <div class="accordion">
+    <button class="accordion-header">
+     GCP Fundamentals & Global Infrastructure 
+      <span class="arrow">▼</span>
+    </button>
+    <div class="accordion-content">
+      <ul>
+        <li> GCP Regions</li>
+        <li>GCP Zones </li>
+        <li>GCP Architecture Overview </li>
+        <li>AWS Free Tier and Pricing Models</li>
+      </ul>
+      <ul class="tasks">
+        <li>Task: Identify GCP regions and zones suitable for specific workloads</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <button class="accordion-header">
+      Core GCP Services 
+      <span class="arrow">▼</span>
+    </button>
+    <div class="accordion-content">
+      <ul>
+        <li>Compute Engine (VMs) </li>
+        <li>Cloud Storage (Buckets) </li>
+        <li>Cloud SQL</li>
+        <li>Firestore </li>
+        <li>VPC </li>
+        <li>Load Balancing </li>
+        <li> Cloud Functions </li>
+        <li> Pub/Sub </li>
+        <li>Cloud DNS </li>
+        <li>Cloud Monitoring </li>
+        <li>Cloud Logging </li>
+        <li>Identity and Access Management (IAM) </li>
+        <li>Cloud KMS </li>
+        <li>Deployment Manager </li>
+        <li>Cloud SDK</li>
+      </ul>
+      <ul class="tasks">
+        <li>Task1: Create a Compute Engine instance and configure firewall rules </li>
+        <li>Task2: Set up Cloud Storage bucket with lifecycle rules </li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="accordion">
+    <button class="accordion-header">
+     Security and Networking 
+      <span class="arrow">▼</span>
+    </button>
+    <div class="accordion-content">
+      <ul>
+        <li>VPC Design </li>
+        <li>Firewall Rules </li>
+        <li>Shared VPC  </li>
+        <li>Private Google Access</li>
+      </ul>
+      <ul class="tasks">
+        <li>Task: Setup a secure VPC with public and private subnets in GCP </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <button class="accordion-header">
+       Projects 
+      <span class="arrow">▼</span>
+    </button>
+    <div class="accordion-content">
+      <ul>
+        <li>Deploying a web application using Compute Engine and Cloud Storage </li>
+        <li>Migrating a MySQL database to Cloud SQL  </li>
+        <li>Setting up event-driven architecture using Cloud Functions and Pub/Sub </li>
+        <li>Setting up GCP Infrastructure</li>
+      </ul>
+    </div>
+  </div>
+
+</section>
+<!-- career services -->
+ <section class="career-section">
+  <h2 class="section-title">Career Services & Support</h2>
+  <div class="highlight-box">
+    <p>🎯 <strong>100% Placement Assistance Guarantee</strong></p>
+    <span>We don't just train you - we ensure you land your dream job in the cloud industry</span>
+  </div>
+
+  <div class="cards-container">
+    <div class="card">
+      <div class="icon">📝</div>
+      <h3>Resume Building</h3>
+      <p>Professional resume creation highlighting your AWS skills and projects. ATS-optimized templates that get noticed by recruiters.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🎤</div>
+      <h3>Interview Preparation</h3>
+      <p>Mock interviews with industry experts, technical question practice, and behavioral interview training.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">💼</div>
+      <h3>LinkedIn Optimization</h3>
+      <p>Complete LinkedIn profile makeover to attract recruiters and showcase your AWS expertise effectively.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🤝</div>
+      <h3>Direct Job Placements</h3>
+      <p>Partnerships with 200+ companies for direct placement opportunities. Average salary increase of 80-150%.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">📊</div>
+      <h3>Portfolio Development</h3>
+      <p>GitHub portfolio with real AWS projects that demonstrate your skills to potential employers.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🎓</div>
+      <h3>Certification Guidance</h3>
+      <p>Complete support for AWS certification exams with practice tests and expert guidance.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Reviews & Testimonials Section -->
+<section class="testimonials-section">
+  <div class="testimonials-header">
+    <h2>Reviews & Testimonials</h2>
+    <span class="underline"></span>
+    <div class="rating-summary">
+      ⭐⭐⭐⭐⭐ <strong>4.9/5</strong>
+      <p>Based on 150+ verified reviews from our students</p>
+    </div>
+  </div>
+
+  <div class="testimonials-container">
+    <!-- Testimonial 1 -->
+    <div class="testimonial-box">
+      <p>"Santhosh is a knowledgeable and professional trainer for AWS & DevOps. Answers any doubts/questions with patience and gives detailed explanation. I would definitely recommend to anyone looking for training."</p>
+      <div class="author">
+        <div class="avatar" style="background:#6a11cb;">VM</div>
+        <div>
+          <h4>Vasundhara MB</h4>
+          <span>Cloud Engineer at TCS</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Testimonial 2 -->
+    <div class="testimonial-box">
+      <p>"Thanks to Santhosh, such a helping person. I got more real-time knowledge from him. The hands-on approach really helped me land my AWS Solutions Architect role with 80% salary increment."</p>
+      <div class="author">
+        <div class="avatar" style="background:#ff9933;">GS</div>
+        <div>
+          <h4>Gyanaranjan Sahoo</h4>
+          <span>AWS Solutions Architect</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Testimonial 3 -->
+    <div class="testimonial-box">
+      <p>"The training experience was amazing. The faculties are experienced and explain concepts well while clearing doubts. The support team is really helpful. Overall wonderful experience."</p>
+      <div class="author">
+        <div class="avatar" style="background:#6a11cb;">MR</div>
+        <div>
+          <h4>Madiha Roheen</h4>
+          <span>DevOps Engineer at Infosys</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Testimonial 4 -->
+    <div class="testimonial-box">
+      <p>"The course was very detailed and covered all relevant topics with practical explanations. Teaching was excellent and helped me clear AWS certification on first attempt."</p>
+      <div class="author">
+        <div class="avatar" style="background:#ff9933;">BA</div>
+        <div>
+          <h4>Bodela Aparna</h4>
+          <span>AWS Certified Developer</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+ <!-- Enrollment Section -->
+<!-- <section class="enroll-section">
+  <div class="enroll-container">
+    <blockquote class="enroll-quote">
+      “The best way to predict your future is to create it. <br>
+      Take the first step today with our AWS Training.”
+    </blockquote>
+    <a href="enrollment.html" class="enroll-btn">Enroll Now</a>
+  </div>
+</section> -->
+
+<section class="contact-section">
+    <!-- Left Side Image -->
+    <div class="left-section">
+      <img src="girly.png" alt="Student Image"> 
+    </div>
+
+    <!-- Right Side Form -->
+    <div class="right-section">
+      <h2>Enroll for <span class="highlight">Bright Career</span></h2>
+      <form id="enrollForm">
+        <input type="text" id="firstName" name="first_name" placeholder="Enter first name" required>
+        <input type="text" id="lastName" name="last_name" placeholder="Enter last name" required>
+        <input type="email" id="email" name="email" placeholder="Enter email address" required>
+        <input type="tel" id="contact" name="contact_number" placeholder="Enter contact number" required pattern="[0-9]{10}">
+
+        <!-- Program Type Dropdown -->
+        <select id="programType" name="program_type" required>
+          <option value="" disabled selected>Select Program Type</option>
+          <option value="Training">Training</option>
+          <option value="Internship">Internship</option>
+          <option value="Implementation">Implementation</option>
+        </select>
+
+        <!-- Training Section -->
+        <div id="trainingOptions" class="hidden">
+          <label>Select Training Course</label>
+          <select name="course_name" disabled>
+            <option value="Google Cloud Platform">Google Cloud Platform</option>
+            <option value="GenAI">GenAI</option>
+            <option value="DevOps">DevOps</option>
+            <option value="Data Engineering">Data Engineering</option>
+            <option value="Azure">Azure</option>
+            <option value="AWS">AWS</option>
+            <option value="Python">Python</option>
+          </select>
+        </div>
+
+        <!-- Internship Section -->
+        <div id="internshipOptions" class="hidden">
+          <label>Select Internship</label>
+          <select name="course_name" disabled>
+            <option value="Google Cloud Platform">Google Cloud Platform</option>
+            <option value="GenAI">GenAI</option>
+            <option value="DevOps">DevOps</option>
+            <option value="Data Engineering">Data Engineering</option>
+            <option value="Azure">Azure</option>
+            <option value="AWS">AWS</option>
+            <option value="Python">Python</option>
+          </select>
+        </div>
+
+        <!-- Implementation Section -->
+        <div id="implementationOptions" class="hidden">
+          <label>Select Implementation</label>
+          <select name="course_name" disabled>
+            <option value="Web Development">Web Development</option>
+            <option value="Cloud Solution">Cloud Solution</option>
+            <option value="Digital Marketing">Digital Marketing</option>
+          </select>
+        </div>
+
+        <button type="submit">Submit</button>
+        <!-- <button type="button" class="btn-cancel" id="cancelBtn">Cancel</button> -->
+      </form>
+    </div>
+  </section>
+
+  <script>
+  // Handle dropdown logic
+  const programType = document.getElementById("programType");
+  const trainingOptions = document.getElementById("trainingOptions");
+  const internshipOptions = document.getElementById("internshipOptions");
+  const implementationOptions = document.getElementById("implementationOptions");
+
+  let lastSelected = ""; // keep track of the last chosen option
+
+  programType.addEventListener("change", function () {
+    // If user selects the same option again → toggle it off
+    if (lastSelected === this.value) {
+      trainingOptions.classList.add("hidden");
+      internshipOptions.classList.add("hidden");
+      implementationOptions.classList.add("hidden");
+
+      // disable selects
+      trainingOptions.querySelector("select").disabled = true;
+      internshipOptions.querySelector("select").disabled = true;
+      implementationOptions.querySelector("select").disabled = true;
+
+      this.value = ""; // reset dropdown back to default
+      lastSelected = ""; // reset tracker
+      return;
+    }
+
+    // Hide all sections
+    trainingOptions.classList.add("hidden");
+    internshipOptions.classList.add("hidden");
+    implementationOptions.classList.add("hidden");
+
+    // Disable all selects
+    trainingOptions.querySelector("select").disabled = true;
+    internshipOptions.querySelector("select").disabled = true;
+    implementationOptions.querySelector("select").disabled = true;
+
+    // Show the newly selected one
+    if (this.value === "Training") {
+      trainingOptions.classList.remove("hidden");
+      trainingOptions.querySelector("select").disabled = false;
+    } else if (this.value === "Internship") {
+      internshipOptions.classList.remove("hidden");
+      internshipOptions.querySelector("select").disabled = false;
+    } else if (this.value === "Implementation") {
+      implementationOptions.classList.remove("hidden");
+      implementationOptions.querySelector("select").disabled = false;
+    }
+
+    lastSelected = this.value; // update tracker
+  });
+
+  // Cancel button reset
+  document.getElementById("cancelBtn").addEventListener("click", function () {
+    document.getElementById("enrollForm").reset();
+    trainingOptions.classList.add("hidden");
+    internshipOptions.classList.add("hidden");
+    implementationOptions.classList.add("hidden");
+
+    // disable selects
+    trainingOptions.querySelector("select").disabled = true;
+    internshipOptions.querySelector("select").disabled = true;
+    implementationOptions.querySelector("select").disabled = true;
+
+    lastSelected = ""; // reset tracker
+  });
+</script>
+<!-- Success Message -->
+  <div id="successMessage" style="display:none; text-align:center;">
+    <h2>Your enrollment has been successfully done ✅</h2>
+    <button id="newResponseBtn">Submit Another Response</button>
+  </div>
+
+  <script>
+    const form = document.getElementById("enrollForm");
+    const formContainer = document.getElementById("formContainer");
+    const successMessage = document.getElementById("successMessage");
+    const newResponseBtn = document.getElementById("newResponseBtn");
+    const cancelBtn = document.getElementById("cancelBtn");
+
+    // Handle form submission
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+       window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
+
+
+<!-- emailjs-logic -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("pw1e_6-oOqW74Wnk1");
+   })();
+</script>
+<script>
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
+  emailjs.sendForm('service_2m6as2s', 'template_9jspsmm', this)
+    .then(function(response) {
+      console.log('SUCCESS!', response.status, response.text);
+      formCard.classList.add('d-none');
+      successMessage.classList.remove('d-none');
+    }, function(error){
+      console.log('FAILED...', error);
+      alert('Something went wrong. Please try again.');
+    });
+});
+</script>
+
+<!--browse more courses  -->
+<!-- Courses Section -->
+<section class="courses-section">
+  <h2>
+    Learn More Courses from 
+    <span class="highlight">ConfideoIT Services</span>
+  </h2>
+
+  <div class="courses-container">
+    <!-- Card 1 -->
+    <div class="course-card">
+      <img src="dataengineering.png" alt="Course 1">
+      <h3>Data Engineering</h3>
+      <a href="dataengineering.html" class="btn btn-primary">Learn More</a>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="course-card">
+      <img src="python.png" alt="Course 2">
+      <h3>Python</h3>
+      <a href="python.html" class="btn btn-primary">Learn More</a>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="course-card">
+      <img src="devops.png" alt="Course 3">
+      <h3>Devops</h3>
+      <a href="devops.html" class="btn btn-primary">Learn More</a>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="course-card">
+      <img src="genAI.png" alt="Course 4">
+      <h3>GenAI</h3>
+      <a href="genai.html" class="btn btn-primary">Learn More</a>
+    </div>
+  </div>
+</section>
+
+  
+    <!-- Footer -->
+  <!-- Contact Section -->
+<footer id="contact" class="footer">
+  <div class="footer-container">
+    <!-- Left Section -->
+    <div class="footer-left">
+      <img src="ConfideoIT.png" alt="CIS Logo" class="footer-logo">
+      <p>
+       “Confideo IT – Where solutions empower businesses and training empowers people.”  </p>
+      <div class="social-links">
+        <a href="https://www.facebook.com/profile.php?id=61563414006847"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/confideoit/"><i class="fab fa-instagram"></i></a>
+        <a href="https://github.com/confideoit"><i class="fab fa-github "></i></a>
+        <a href="https://www.linkedin.com/company/confideo-it-services/posts/?feedView=all"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+
+    <!-- Right Section -->
+    <div class="footer-right">
+      <div>
+        <h3>About</h3>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <!-- <li><a href="#">News & Blogs</a></li> -->
+          <li><a href="#">Become a Teacher</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Quick Link</h3>
+        <ul>
+          <!-- <li><a href="#">Live Workshop</a></li> -->
+          <li><a href="#">Free Courses</a></li>
+          <li><a href="#">Admission</a></li>
+          <li><a href="#">Request a Demo</a></li>
+          <li><a href="#">Media Relations</a></li>
+          <li><a href="#">Students</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contact Info</h3>
+        <p>📞 817-988-6658</p>
+        <p>📧 info@confideoit.com</p>
+      </div>
+    </div>
+  </div>
+   <div class="footer-bottom">
+    <div class="footer-bottom-left">
+      © Copyright 2025. All Rights Reserved by <a href="https://confideoit.com">Confideo IT Services</a>
+    </div>
+    <div class="footer-bottom-right">
+      <a href="terms.html">Terms</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="support.html">Support</a>
+    </div>
+  </div>
+</footer>
+<!-- Bootstrap JS with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Font Awesome for icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <script>
+  document.querySelectorAll(".module-header").forEach(header => {
+    header.addEventListener("click", () => {
+      const module = header.parentElement;
+      const subtopics = module.querySelector(".subtopics");
+      const tasks = module.querySelector(".tasks");
+      const arrow = header.querySelector(".arrow");
+
+      // toggle both subtopics & tasks
+      if ((subtopics && subtopics.style.display === "block") || (tasks && tasks.style.display === "block")) {
+        if (subtopics) subtopics.style.display = "none";
+        if (tasks) tasks.style.display = "none";
+        arrow.classList.remove("rotate");
+      } else {
+        if (subtopics) subtopics.style.display = "block";
+        if (tasks) tasks.style.display = "block";
+        arrow.classList.add("rotate");
+      }
+    });
+  });
+</script>
+
+
+<!-- course-syllabus-section -->
+ <script>
+  document.querySelectorAll(".accordion-header").forEach(header => {
+  header.addEventListener("click", () => {
+    const content = header.nextElementSibling;
+    const isOpen = header.classList.contains("active");
+
+    // Close all accordions (optional)
+    document.querySelectorAll(".accordion-header").forEach(h => {
+      h.classList.remove("active");
+      h.nextElementSibling.style.maxHeight = null;
+      h.nextElementSibling.classList.remove("open");
+    });
+
+    if (!isOpen) {
+      header.classList.add("active");
+      content.classList.add("open");
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+});
+</script>
+
+</body>
+</html>

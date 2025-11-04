@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enrollment Form</title>
+  <style>
+/* page close button */
+.close-btn {
+  margin-top: 50px;
+  position: fixed;   /* fixed to the screen, not header */
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  color: black;
+  background-color: whitesmoke;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+  z-index: 9999;  /* makes sure it stays on top */
+}
+
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 60px;
+      position: relative;
+    }
+
+    .left-section {
+      position: relative;
+      width: 400px;
+      height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .circle-bg {
+      position: absolute;
+      width: 350px;
+      height: 350px;
+      border-radius: 50%;
+      background: #ffeb99;
+      z-index: 0;
+    }
+
+    .images-grid {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      z-index: 1;
+    }
+
+    .images-grid img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .bubble {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 200, 200, 0.6);
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .bubble.small { width: 20px; height: 20px; top: 10%; left: -30px; }
+    .bubble.medium { width: 40px; height: 40px; bottom: 15%; right: -40px; }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+    .right-section {
+      max-width: 400px;
+    }
+
+    .right-section h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .highlight {
+      background: linear-gradient(90deg, #ff512f, #dd2476);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: bold;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, select {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    button {
+      padding: 12px;
+      background: linear-gradient(90deg, #007bff, #0056d6);
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    .btn-cancel {
+      background: #dc3545; /* red */
+    }
+
+  .hidden {
+    display: none;
+  }
+  </style>
+</head>
+<body>
+
+  <!-- Close Button -->
+<a href="javascript:void(0);" class="close-btn" onclick="goBack()">×</a>
+
+
+  <div class="container" id="formContainer">
+    <!-- Left Section -->
+    <div class="left-section">
+      <div class="circle-bg"></div>
+      <div class="images-grid">
+        <img src="https://media.istockphoto.com/id/1323167372/photo/indian-man-using-laptop-computer-mobile-phone-working-freelance-project-online-sitting.jpg?s=612x612&w=0&k=20&c=xe2lOgouKmfg3NmBVbW6yde4gdwR9JpjwOp3ARcJPEM=" alt="Student 1">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYseLiV-Hv-lXlyi6Yh9raMcOFK8-tsVNg8g&s" alt="Student 2">
+        <img src="https://img.etimg.com/thumb/width-1200,height-1200,imgsize-48204,resizemode-75,msid-107862129/nri/study/course-correction-not-uk-us-but-more-indian-students-are-heading-to-these-off-beat-locations.jpg" alt="Student 3">
+        <img src="https://student-cms.prd.timeshighereducation.com/sites/default/files/styles/default/public/2023-02/iStock-1365601828.jpg?itok=Cp4qmu16" alt="Student 4">
+      </div>
+      <div class="bubble small"></div>
+      <div class="bubble medium"></div>
+    </div>
+
+    <!-- Right Section -->
+<div class="right-section">
+  <h2>Enroll for <span class="highlight">Bright Career</span></h2>
+  <form id="enrollForm">
+    <input type="text" id="firstName" name="first_name" placeholder="Enter first name" required>
+    <input type="text" id="lastName" name="last_name" placeholder="Enter last name" required>
+    <input type="email" id="email" name="email" placeholder="Enter email address" required>
+    <input type="tel" id="contact" name="contact_number" placeholder="Enter contact number" required pattern="[0-9]{10}">
+
+    <!-- Program Type Dropdown -->
+    <select id="programType" name="program_type" required>
+      <option value="" disabled selected>Select Program Type</option>
+      <option value="Training">Training</option>
+      <option value="Internship">Internship</option>
+      <option value="Implementation">Implementation</option>
+    </select>
+
+    <!-- Training Section -->
+    <div id="trainingOptions" class="hidden">
+      <label>Select Training Course</label>
+      <select name="course_name" disabled>
+        <option value="Google Cloud Platform">Google Cloud Platform</option>
+        <option value="GenAI">GenAI</option>
+        <option value="DevOps">DevOps</option>
+        <option value="Data Engineering">Data Engineering</option>
+        <option value="Azure">Azure</option>
+        <option value="AWS">AWS</option>
+        <option value="Python">Python</option>
+      </select>
+    </div>
+
+    <!-- Internship Section -->
+    <div id="internshipOptions" class="hidden">
+      <label>Select Internship</label>
+      <select name="course_name" disabled>
+        <option value="Google Cloud Platform">Google Cloud Platform</option>
+        <option value="GenAI">GenAI</option>
+        <option value="DevOps">DevOps</option>
+        <option value="Data Engineering">Data Engineering</option>
+        <option value="Azure">Azure</option>
+        <option value="AWS">AWS</option>
+        <option value="Python">Python</option>
+      </select>
+    </div>
+
+    <!-- Implementation Section -->
+    <div id="implementationOptions" class="hidden">
+      <label>Select Implementation</label>
+      <select name="course_name" disabled>
+        <option value="Web Development">Web Development</option>
+        <option value="Cloud Solution">Cloud Solution</option>
+        <option value="Digital Marketing">Digital Marketing</option>
+      </select>
+    </div>
+
+    <button type="submit">Submit</button>
+    <button type="button" class="btn-cancel" id="cancelBtn">Cancel</button>
+  </form>
+</div>
+  </div>
+
+  <!-- Success Message -->
+  <div id="successMessage" style="display:none; text-align:center;">
+    <h2>Your enrollment has been successfully done ✅</h2>
+    <button id="newResponseBtn">Submit Another Response</button>
+  </div>
+
+  <script>
+    const form = document.getElementById("enrollForm");
+    const formContainer = document.getElementById("formContainer");
+    const successMessage = document.getElementById("successMessage");
+    const newResponseBtn = document.getElementById("newResponseBtn");
+    const cancelBtn = document.getElementById("cancelBtn");
+
+    // Handle form submission
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      formContainer.style.display = "none";
+      successMessage.style.display = "block";
+    });
+
+    // Submit another response
+    newResponseBtn.addEventListener("click", function() {
+      successMessage.style.display = "none";
+      formContainer.style.display = "flex";
+      form.reset();
+    });
+
+    // Cancel button → go back
+    cancelBtn.addEventListener("click", function() {
+      window.history.back();
+    });
+  </script>
+
+
+<!-- emailjs-logic -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("pw1e_6-oOqW74Wnk1");
+   })();
+</script>
+<script>
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
+  emailjs.sendForm('service_2m6as2s', 'template_9jspsmm', this)
+    .then(function(response) {
+      console.log('SUCCESS!', response.status, response.text);
+      formCard.classList.add('d-none');
+      successMessage.classList.remove('d-none');
+    }, function(error){
+      console.log('FAILED...', error);
+      alert('Something went wrong. Please try again.');
+    });
+});
+</script>
+
+<script>
+  const programType = document.getElementById("programType");
+const trainingOptions = document.getElementById("trainingOptions");
+const internshipOptions = document.getElementById("internshipOptions");
+const implementationOptions = document.getElementById("implementationOptions");
+
+programType.addEventListener("change", function() {
+  // Hide all sections & disable selects
+  [trainingOptions, internshipOptions, implementationOptions].forEach(section => {
+    section.classList.add("hidden");
+    section.querySelector("select").disabled = true;
+  });
+
+  // Show and enable the selected one
+  if (this.value === "Training") {
+    trainingOptions.classList.remove("hidden");
+    trainingOptions.querySelector("select").disabled = false;
+  } else if (this.value === "Internship") {
+    internshipOptions.classList.remove("hidden");
+    internshipOptions.querySelector("select").disabled = false;
+  } else if (this.value === "Implementation") {
+    implementationOptions.classList.remove("hidden");
+    implementationOptions.querySelector("select").disabled = false;
+  }
+});
+</script>
+
+<style>
+  /* Mobile responsive fix */
+@media (max-width: 768px) {
+  body {
+    height: auto;       /* allow scrolling */
+    overflow: auto;
+    padding: 20px 0;
+  }
+
+  .container {
+    flex-direction: column;   /* stack vertically */
+    gap: 30px;
+  }
+
+  .left-section {
+    width: 100%;
+    height: auto;
+  }
+
+  .circle-bg {
+    width: 250px;
+    height: 250px;
+  }
+
+  .images-grid img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .right-section {
+    max-width: 100%;
+    width: 90%;     /* shrink form for mobile */
+  }
+
+  .right-section h2 {
+    text-align: center;
+    font-size: 22px;
+  }
+
+  input, select, button {
+    font-size: 14px;
+  }
+}
+
+</style>
+
+<!-- <style>
+
+@media (max-width: 768px) {
+  .left-section {
+    display: none;
+  }
+
+  .container {
+    justify-content: center;
+  }
+
+  .right-section {
+    max-width: 100%;
+    width: 95%;      
+  }
+
+  .right-section h2 {
+    text-align: center;
+    font-size: 22px;
+  }
+
+  input, select, button {
+    font-size: 14px;
+  }
+}
+
+</style> -->
+
+<!-- script for close button -->
+ <script>
+  function goBack() {
+    if (document.referrer !== "") {
+      window.history.back();
+    } else {
+      window.location.href = "index.html"; // fallback if no history
+    }
+  }
+</script>
+
+</body>
+</html>
