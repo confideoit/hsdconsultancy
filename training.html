@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>training</title>
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <style>
+    header {
+  position: fixed !important;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  /* background-color: #03042c; */
+    background: radial-gradient(circle, #1a3d8f 0%,#03042c 100%);
+
+}
+.navbar {
+  display: flex;
+  justify-content: space-between; /* logo left, toggler right */
+  align-items: center;
+  padding: 4px 16px !important;
+  min-height: 56px;
+}
+
+.navbar-brand {
+  padding-left: 8px;
+}
+
+
+
+.navbar-brand img {
+  height: 60x;
+  width: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+
+
+
+/* Navbar link styles */
+.navbar-nav .nav-link {
+  margin-left: 10px;
+  margin-right: 20px;
+  padding: 8px 12px;
+  color: white !important;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #00aaff !important;
+}
+
+    .trainings h2 {
+      margin-top: 80px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .cards-container {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      padding: 50px;
+    }
+
+    .course-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 20px 10px rgba(41, 17, 17, 0.1);
+      width: 250px;
+      text-align: center;
+      transition: transform 0.3s ease;
+      margin-right: 1%;
+      margin-left: 1%;
+    }
+
+    .course-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .course-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+
+    .course-content {
+      padding: 15px;
+    }
+
+    .course-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .course-rating {
+      color: #f39c12;
+      margin-bottom: 10px;
+    }
+
+    .course-rating span {
+      color: #555;
+      font-size: 13px;
+    }
+
+    .enroll-btn {
+      display: inline-block;
+      padding: 8px 15px;
+      background: #28a745;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .enroll-btn:hover {
+      background: #218838;
+    }
+
+    /* Arrow box styling */
+    .arrow-box {
+      background: rgba(0,0,0,0.6);
+      padding: 10px 14px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+      width: auto;
+      transform: translateY(5%);
+      margin: auto;
+    }
+    .carousel-control-prev {
+      left: 20px;
+    }
+    .carousel-control-next {
+      right: 20px;
+    }
+
+    .carousel-control-prev i,
+    .carousel-control-next i {
+      color: #fff;
+      font-size: 12px;
+    }
+    @media (max-width: 768px) {
+  .cards-container {
+    flex-direction: column;   /* stack vertically */
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .course-card {
+    width: 78%;              /* full width but with margin */
+    margin: 0 auto;
+  }
+
+  /* keep arrows visible */
+  .carousel-control-prev,
+  .carousel-control-next {
+    display: flex !important;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+  }
+
+  .carousel-control-prev {
+    left: 10px;
+  }
+
+  .carousel-control-next {
+    right: 10px;
+  }
+
+  .carousel-control-prev i,
+  .carousel-control-next i {
+    font-size: 20px;  /* bigger for touch */
+  }
+}
+
+    .footer {
+  /* background-color: #03042c; */
+          background: radial-gradient(circle, #1a3d8f 0%,#03042c 100%);
+
+  color: white;
+  padding: 40px 0;
+  font-family: Arial, sans-serif;
+  scroll-margin-top: 100px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 0 20px;
+}
+
+.footer-left {
+  flex: 1;
+  min-width: 250px;
+  text-align:start;
+}
+
+.footer-right {
+  flex: 2;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 40px;
+  margin-left: 40px;
+}
+
+.footer-logo {
+  width: 150px;
+}
+
+.footer p {
+  color: #ccc;
+  margin: 15px 0;
+  line-height: 1.5;
+}
+
+.footer h3 {
+  margin-bottom: 15px;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin-bottom: 8px;
+}
+
+.footer ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer ul li a:hover {
+  color: #fff;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin-right: 8px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 50%;
+  color: white;
+  font-size: 18px;
+  transition: background 0.3s;
+}
+
+.social-links a:hover {
+  background: #00b894;
+}
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 50px; /* Added padding for breathing room */
+  border-top: 1px solid rgba(255, 255, 255, 0.2); /* Nice separation line */
+  font-size: 14px;
+  color: #fff;
+  flex-wrap: wrap; /* Responsive stacking if needed */
+  margin-top: 50px;
+}
+
+.footer-bottom-left {
+  margin-bottom: 5px;
+  margin-top: 30px;
+}
+.footer-bottom-right {
+  margin-top: 30px;
+}
+.footer-bottom a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 15px;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom-left a {
+  color: #00d1b2;
+  text-decoration: none;
+}
+
+.footer-bottom-left a:hover {
+  text-decoration: underline;
+}
+.close-btn {
+  margin-top: 50px;
+  position: fixed;   /* fixed to the screen, not header */
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  color: black;
+  background-color: whitesmoke;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+  z-index: 9999;  /* makes sure it stays on top */
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-left,
+  .footer-right {
+    margin: 0;
+    flex: 1 1 100%;
+    text-align: center;
+  }
+
+  .footer-right {
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px 20px;
+  }
+
+  .footer-bottom-left,
+  .footer-bottom-right {
+    margin: 10px 0;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+}
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-image {
+    margin-top: 20px;
+  }
+}
+  </style>
+
+  <!-- Close Button -->
+<!-- <a href="javascript:void(0);" class="close-btn" onclick="goBack()">×</a> -->
+
+<header class="sticky-top z-index-fixed">
+  <nav class="navbar navbar-dark navbar-expand-md">
+    <div class="container-fluid">
+      <!-- brand (left) -->
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="ConfideoIT.png" alt="CIS Logo" height="40" />
+      </a>
+
+      <!-- hamburger (right) -->
+      <button class="navbar-toggler ms-auto" type="button"
+              data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- links -->
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <!-- your li/a items -->
+          <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="courses.html">Courses</a></li>
+        <!-- Dropdown for Services -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle text-white"
+   href="#"
+   id="servicesDropdown"
+   role="button"
+   data-bs-toggle="dropdown"
+   aria-expanded="false"
+   onclick="document.querySelector('#').scrollIntoView({behavior: 'smooth'});">
+   Services
+</a>
+      <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                <li><a class="dropdown-item" href="implementation.html">Implementation</a></li>
+
+        <li><a class="dropdown-item" href="training.html">Training</a></li>
+        <li><a class="dropdown-item" href="internship.html">Internships</a></li>
+        <li><a class="dropdown-item" href="workshops.html">Workshops</a></li>
+        <li><a class="dropdown-item" href="realtime-projects.html">Real Time Projects</a></li>
+      </ul>
+    </li>
+        <li class="nav-item"><a class="nav-link text-white" href="index.html">Clients</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="blog.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="contact.html">ContactUs</a></li>
+    
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+
+<section class="trainings">
+  <h2>TRAININGS</h2>
+  <div class="underline"></div>
+
+  <div id="courseCarousel" class="carousel slide" data-bs-pause="false">
+    <div class="carousel-inner">
+
+      <!-- Slide 1 -->
+      <div class="carousel-item active">
+        <div class="cards-container">
+          <div class="course-card">
+            <img src="gcp.png" alt="GCP image">
+            <div class="course-content">
+              <h3 class="course-title">GCP</h3>
+              <div class="course-rating">★★★★★ <span>(5.0 / 3 Ratings)</span></div>
+              <a href="gcp.html" class="enroll-btn">ENROLL</a>
+            </div>
+          </div>
+
+          <div class="course-card">
+            <img src="devops.png" alt="Devops Image">
+            <div class="course-content">
+              <h3 class="course-title">DevOps</h3>
+              <div class="course-rating">★★★★★ <span>(5.0 / 3 Ratings)</span></div>
+              <a href="devops.html" class="enroll-btn">ENROLL</a>
+            </div>
+          </div>
+
+          <div class="course-card">
+            <img src="AWS.jpg" alt="AWS image">
+            <div class="course-content">
+              <h3 class="course-title">AWS</h3>
+              <div class="course-rating">★★★★★ <span>(5.0 / 3 Ratings)</span></div>
+              <a href="aws.html" class="enroll-btn">ENROLL</a>
+            </div>
+          </div>
+
+          <div class="course-card">
+            <img src="azure.png" alt="Azure image">
+            <div class="course-content">
+              <h3 class="course-title">AZURE</h3>
+              <div class="course-rating">★★★★★ <span>(5.0 / 3 Ratings)</span></div>
+              <a href="azure.html" class="enroll-btn">ENROLL</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-item">
+        <div class="cards-container">
+          <div class="course-card">
+            <img src="genAI.png" alt="GenAI image">
+            <div class="course-content">
+              <h3 class="course-title">GenAI</h3>
+              <div class="course-rating">★★★★★ <span>(5.0 / 3 Ratings)</span></div>
+              <a href="genai.html" class="enroll-btn">ENROLL</a>
+            </div>
+          </div>
+
+          <div class="course-card">
+            <img src="python.png" alt="Python image">
+            <div class="course-content">
+              <h3 class="course-title">Python</h3>
+              <div class="course-rating">★★★★★ <span>(5.0 / 3 Ratings)</span></div>
+              <a href="python.html" class="enroll-btn">ENROLL</a>
+            </div>
+          </div>
+
+          <div class="course-card">
+            <img src="dataengineering.png" alt="Data Engineering image">
+            <div class="course-content">
+              <h3 class="course-title">Data Engineering</h3>
+              <div class="course-rating">★★★★★ <span>(5.0 / 3 Ratings)</span></div>
+              <a href="dataengineering.html" class="enroll-btn">ENROLL</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Arrows -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#courseCarousel" data-bs-slide="prev">
+      <span class="arrow-box"><i class="fas fa-chevron-left"></i></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#courseCarousel" data-bs-slide="next">
+      <span class="arrow-box"><i class="fas fa-chevron-right"></i></span>
+    </button>
+  </div>
+</section>
+
+<footer id="contact" class="footer">
+  <div class="footer-container">
+    <div class="footer-left">
+      <img src="ConfideoIT.png" alt="CIS Logo" class="footer-logo">
+      <p>“Confideo IT – Where solutions empower businesses and training empowers people.”</p>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-github "></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+    <div class="footer-right">
+      <div>
+        <h3>About</h3>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="#">Become a Teacher</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Quick Link</h3>
+        <ul>
+          <li><a href="#">Free Courses</a></li>
+          <li><a href="#">Admission</a></li>
+          <li><a href="#">Request a Demo</a></li>
+          <li><a href="#">Media Relations</a></li>
+          <li><a href="#">Students</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contact Info</h3>
+        <p>📞 817-988-6658</p>
+        <p>📧 info@confideoit.com</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-bottom-left">
+      © Copyright 2025. All Rights Reserved by <a href="https://confideoit.com">Confideo IT Services</a>
+    </div>
+    <div class="footer-bottom-right">
+      <a href="terms.html">Terms</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="support.html">Support</a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  function goBack() {
+    if (document.referrer !== "") {
+      window.history.back();
+    } else {
+      window.location.href = "index.html";
+    }
+  }
+</script>
+</body>
+</html>

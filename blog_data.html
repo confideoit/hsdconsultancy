@@ -1,0 +1,655 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Blog</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+
+<!-- header -->
+<header class="sticky-top z-index-fixed">
+  <nav class="navbar navbar-dark navbar-expand-md">
+    <div class="container-fluid">
+      <!-- brand (left) -->
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="ConfideoIT.png" alt="CIS Logo" height="40" />
+      </a>
+
+      <!-- hamburger (right) -->
+      <button class="navbar-toggler ms-auto" type="button"
+              data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- links -->
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <!-- your li/a items -->
+          <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="courses.html">Courses</a></li>
+        <!-- Dropdown for Services -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle text-white"
+   href="#"
+   id="servicesDropdown"
+   role="button"
+   data-bs-toggle="dropdown"
+   aria-expanded="false"
+   onclick="document.querySelector('#').scrollIntoView({behavior: 'smooth'});">
+   Services
+</a>
+      <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                <li><a class="dropdown-item" href="implementation.html">Implementation</a></li>
+
+        <li><a class="dropdown-item" href="training.html">Training</a></li>
+        <li><a class="dropdown-item" href="internship.html">Internships</a></li>
+        <li><a class="dropdown-item" href="workshops.html">Workshops</a></li>
+        <li><a class="dropdown-item" href="realtime-projects.html">Real Time Projects</a></li>
+      </ul>
+    </li>
+        <li class="nav-item"><a class="nav-link text-white" href="#clients">Clients</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="blog.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="contact.html">ContactUs</a></li>
+    
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+
+
+  <div class="container py-4">
+    <a href="javascript:history.back()" class="back-btn">&larr; Back</a>
+    <div class="container-flex">
+      
+      <div class="sidebar">
+        <button onclick="scrollToSection('intro')">Introduction</button>
+        <button onclick="scrollToSection('description')">Description</button>
+        <button onclick="scrollToSection('mainContent')">Main Content</button>
+        <button onclick="scrollToSection('interviewQuestions')">Interview Questions</button>
+        <button onclick="scrollToSection('keyTakeaways')">Key Takeaways</button>
+        <button onclick="scrollToSection('conclusion')">Conclusion</button>
+        <button onclick="scrollToSection('furtherReading')">Further Reading</button>
+      </div>
+      
+      <div class="content" id="content">
+        <!-- Dynamic blog content will load here -->
+      </div>
+      
+    </div>
+  </div>
+
+
+  <!-- Footer -->
+  <!-- Contact Section -->
+<footer id="contact" class="footer">
+  <div class="footer-container">
+    <!-- Left Section -->
+    <div class="footer-left">
+      <img src="ConfideoIT.png" alt="CIS Logo" class="footer-logo">
+      <p>
+        “Confideo IT – Where solutions empower businesses and training empowers people.” </p>
+      <div class="social-links">
+        <a href="https://www.facebook.com/profile.php?id=61563414006847"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/confideoit/"><i class="fab fa-instagram"></i></a>
+        <a href="https://github.com/confideoit"><i class="fab fa-github "></i></a>
+        <a href="https://www.linkedin.com/company/confideo-it-services/posts/?feedView=all"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+
+    <!-- Right Section -->
+    <div class="footer-right">
+      <div>
+        <h3>About</h3>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <!-- <li><a href="#">News & Blogs</a></li> -->
+          <li><a href="#">Become a Teacher</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Quick Link</h3>
+        <ul>
+          <!-- <li><a href="#">Live Workshop</a></li> -->
+          <li><a href="#">Free Courses</a></li>
+          <li><a href="#">Admission</a></li>
+          <li><a href="#">Request a Demo</a></li>
+          <li><a href="#">Media Relations</a></li>
+          <li><a href="#">Students</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contact Info</h3>
+        <p>📞 817-988-6658</p>
+        <p>📧 info@confideoit.com</p>
+      </div>
+    </div>
+  </div>
+   <div class="footer-bottom">
+    <div class="footer-bottom-left">
+      © Copyright 2025. All Rights Reserved by <a href="https://confideoit.com">Confideo IT Services</a>
+    </div>
+    <div class="footer-bottom-right">
+      <a href="#">Terms</a>
+      <a href="#">Privacy</a>
+      <a href="#">Support</a>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+function q(n) {
+  return (new URLSearchParams(location.search).get(n) || '').trim();
+}
+
+function escapeHtml(s='') {
+  return String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]));
+}
+
+function scrollToSection(id) {
+  const el = document.getElementById(id);
+  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+const blogId = q('blog');
+const courseName = q('course');
+
+if (!blogId) {
+  document.getElementById('content').innerHTML = '<p class="text-danger">Blog ID is missing in URL.</p>';
+} else {
+  fetch('blog_data.json')
+  .then(res => res.json())
+  .then(data => {
+    const blog = data.blogs.find(b => 
+      b.id?.trim().toLowerCase() === blogId.toLowerCase() &&
+      (!courseName || b.course?.trim().toLowerCase() === courseName.toLowerCase())
+    );
+
+    if(!blog){
+      document.getElementById('content').innerHTML = '<p class="text-danger">Blog not found</p>';
+      return;
+    }
+
+    document.getElementById('content').innerHTML = `
+      <div class="section" id="intro">
+        <h3 class="section-title">Introduction</h3>
+        <p>${escapeHtml(blog.introduction || 'No introduction available.')}</p>
+      </div>
+      
+      <div class="section" id="description">
+        <h3 class="section-title">Description</h3>
+        <p>${escapeHtml(blog.description || 'No description available.')}</p>
+      </div>
+      
+      <div class="section" id="mainContent">
+        <h3 class="section-title">Main Content</h3>
+        <p>${escapeHtml(blog.mainContent || 'No main content available.')}</p>
+      </div>
+      
+      <div class="section" id="interviewQuestions">
+        <h3 class="section-title">Interview Questions</h3>
+        <ul>
+          ${(blog.interviewQuestions || []).map(q => `<li>${escapeHtml(q)}</li>`).join('')}
+        </ul>
+      </div>
+      
+      <div class="section" id="keyTakeaways">
+        <h3 class="section-title">Key Takeaways</h3>
+        <ul>
+          ${(blog.keyTakeaways || []).map(k => `<li>${escapeHtml(k)}</li>`).join('')}
+        </ul>
+      </div>
+      
+      <div class="section" id="conclusion">
+        <h3 class="section-title">Conclusion</h3>
+        <p>${escapeHtml(blog.conclusion || 'No conclusion available.')}</p>
+      </div>
+      
+      <div class="section" id="furtherReading">
+        <h3 class="section-title">Further Reading</h3>
+        <ul>
+          ${(blog.furtherReading || []).map(link => `<li><a href="${escapeHtml(link)}" target="_blank">${escapeHtml(link)}</a></li>`).join('')}
+        </ul>
+      </div>
+
+      <div style="text-align:center; margin:50px 0;">
+        <a href="enrollment.html" class="btn btn-primary btn-lg">Enroll Now</a>
+      </div>
+    `;
+  })
+  .catch(err => {
+    console.error(err);
+    document.getElementById('content').innerHTML = '<p class="text-danger">Failed to load blog data.</p>';
+  });
+}
+</script>
+
+<style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #f4f6f8;
+      color: #333;
+      margin: 0;
+    }
+    html {
+      scroll-padding-top: 80px;
+    }
+    .back-btn {
+  display: inline-block;
+  margin-top: 60px; 
+  margin-bottom: 1rem;
+  text-decoration: none;
+  color: #0d6efd;
+  font-weight: bold;
+}
+    .container-flex {
+      display: flex;
+      gap: 20px;
+      padding: 20px;
+    }
+    .sidebar {
+      flex: 1;
+      max-width: 350px;
+      background: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 20px 20px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 20px;
+      height: fit-content;
+    }
+    .sidebar button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: none;
+     
+      color: rgb(53, 50, 50);
+      border-radius: 4px;
+      cursor: pointer;
+      text-align: left;
+      transition: background 0.3s;
+    }
+    .sidebar button:hover {
+      background: #0b5ed7;
+    }
+    .content {
+      flex: 3;
+      background: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      max-height: 80vh;
+      overflow-y: auto;
+    }
+    .section {
+      padding-top: 60px;
+      margin-bottom: 40px;
+    }
+    .section-title {
+      font-weight: bold;
+      margin-bottom: 1rem;
+      color: #0d6efd;
+      border-bottom: 2px solid #0d6efd;
+      padding-bottom: 5px;
+    }
+    a.back-btn {
+      display: inline-block;
+      margin-bottom: 1rem;
+      text-decoration: none;
+      color: #0d6efd;
+      font-weight: bold;
+    }
+    a.enroll-btn {
+      text-align: center;
+      display: block;
+      margin: 50px auto;
+      padding: 15px 30px;
+      font-size: 1.1rem;
+      background: #198754;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    a.enroll-btn:hover {
+      background: #157347;
+    }
+
+    header {
+  position: fixed !important;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  /* background-color: #03042c; */
+    background: radial-gradient(circle, #1a3d8f 0%,#03042c 100%);
+
+}
+.navbar {
+  display: flex;
+  justify-content: space-between; /* logo left, toggler right */
+  align-items: center;
+  padding: 4px 16px !important;
+  min-height: 56px;
+}
+
+.navbar-brand {
+  padding-left: 8px;
+}
+
+
+
+.navbar-brand img {
+  height: 60x;
+  width: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+
+
+/* Navbar link styles */
+.navbar-nav .nav-link {
+  margin-left: 10px;
+  margin-right: 20px;
+  padding: 8px 12px;
+  color: white !important;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #00aaff !important;
+}
+
+
+/* footer-section */
+.footer {
+  /* background-color: #03042c; */
+          background: radial-gradient(circle, #1a3d8f 0%,#03042c 100%);
+
+  color: white;
+  padding: 40px 0;
+  font-family: Arial, sans-serif;
+  scroll-margin-top: 100px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 0 20px;
+}
+
+.footer-left {
+  flex: 1;
+  min-width: 250px;
+  text-align:start;
+}
+
+.footer-right {
+  flex: 2;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 40px;
+  margin-left: 40px;
+}
+
+.footer-logo {
+  width: 150px;
+}
+
+.footer p {
+  color: #ccc;
+  margin: 15px 0;
+  line-height: 1.5;
+}
+
+.footer h3 {
+  margin-bottom: 15px;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin-bottom: 8px;
+}
+
+.footer ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer ul li a:hover {
+  color: #fff;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin-right: 8px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 50%;
+  color: white;
+  font-size: 18px;
+  transition: background 0.3s;
+}
+
+.social-links a:hover {
+  background: #00b894;
+}
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 50px; /* Added padding for breathing room */
+  border-top: 1px solid rgba(255, 255, 255, 0.2); /* Nice separation line */
+  font-size: 14px;
+  color: #fff;
+  flex-wrap: wrap; /* Responsive stacking if needed */
+  margin-top: 50px;
+}
+
+.footer-bottom-left {
+  margin-bottom: 5px;
+  margin-top: 30px;
+}
+.footer-bottom-right {
+  margin-top: 30px;
+}
+.footer-bottom a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 15px;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom-left a {
+  color: #00d1b2;
+  text-decoration: none;
+}
+
+.footer-bottom-left a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+/* Responsive Design */
+@media (max-width: 576px) {
+  .section {
+    padding-top: 40px;
+    margin-bottom: 30px;
+  }
+
+  .section-title {
+    font-size: 1.2rem;
+  }
+
+  .back-btn {
+    margin-top: 40px;
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 768px) {
+  .sidebar button {
+    font-size: 16px;
+    padding: 12px 10px;
+    width: 100%;        /* Full width buttons */
+  }
+}
+@media (max-width: 992px) {
+  .container-flex {
+    flex-direction: column;  /* Stack sidebar above content */
+    padding: 10px;
+  }
+
+  .sidebar {
+    max-width: 100%;
+    margin-bottom: 20px;
+    position: relative;  /* Remove sticky behavior */
+    top: 0;
+  }
+
+  .content {
+    max-height: none;      /* Remove scroll limit */
+    overflow-y: visible;
+  }
+}
+
+/* footer */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-left,
+  .footer-right {
+    margin: 0;
+    flex: 1 1 100%;
+    text-align: center;
+  }
+
+  .footer-right {
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px 20px;
+  }
+
+  .footer-bottom-left,
+  .footer-bottom-right {
+    margin: 10px 0;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+}
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+}
+  </style>
+
+
+  <button id="scrollTopBtn" title="Go to top">↑</button>
+<style>
+  /* Scroll-to-top button */
+#scrollTopBtn {
+  display: none; /* hidden by default */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 12px 16px;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  transition: background 0.3s;
+}
+
+#scrollTopBtn:hover {
+  background-color: #0b5ed7;
+}
+
+/* Only show on mobile */
+@media (max-width: 992px) {
+  #scrollTopBtn {
+    display: block;
+  }
+}
+</style>
+
+<script>
+  // Get the button
+const scrollBtn = document.getElementById("scrollTopBtn");
+
+// Show/hide button on scroll (mobile only)
+window.addEventListener('scroll', () => {
+  if (window.innerWidth <= 992) {   // mobile/tablet only
+    if (document.documentElement.scrollTop > 200 || document.body.scrollTop > 200) {
+      scrollBtn.style.display = "block";
+    } else {
+      scrollBtn.style.display = "none";
+    }
+  } else {
+    scrollBtn.style.display = "none"; // hide on desktop always
+  }
+});
+
+// Scroll to top on click
+scrollBtn.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// Optional: hide button on resize if switching to desktop
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 992) {
+    scrollBtn.style.display = "none";
+  }
+});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,1403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Confideo</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- FontAwesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body>
+
+
+<!-- header -->
+<header class="sticky-top z-index-fixed">
+  <nav class="navbar navbar-dark navbar-expand-md">
+    <div class="container-fluid">
+      <!-- brand (left) -->
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="ConfideoIT.png" alt="CIS Logo" height="40" />
+      </a>
+
+      <!-- hamburger (right) -->
+      <button class="navbar-toggler ms-auto" type="button"
+              data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- links -->
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <!-- your li/a items -->
+          <li class="nav-item"><a class="nav-link text-white" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="courses.html">Courses</a></li>
+        <!-- Dropdown for Services -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle text-white"
+   href="#"
+   id="servicesDropdown"
+   role="button"
+   data-bs-toggle="dropdown"
+   aria-expanded="false"
+   onclick="document.querySelector('#').scrollIntoView({behavior: 'smooth'});">
+   Services
+</a>
+      <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                <li><a class="dropdown-item" href="implementation.html">Implementation</a></li>
+
+        <li><a class="dropdown-item" href="training.html">Training</a></li>
+        <li><a class="dropdown-item" href="internship.html">Internships</a></li>
+        <li><a class="dropdown-item" href="workshops.html">Workshops</a></li>
+        <li><a class="dropdown-item" href="realtime-projects.html">Real Time Projects</a></li>
+      </ul>
+    </li>
+        <li class="nav-item"><a class="nav-link text-white" href="#clients">Clients</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="blog.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="contact.html">ContactUs</a></li>
+    
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+
+<!-- Hero Section -->
+<div class="slider-container">
+    <div class="slider-wrapper" id="sliderWrapper">
+      <!-- Original 3 slides -->
+      <div class="slide slide-1">
+        <div class="slide-content">
+          <h1>Master Cloud Technologies</h1>
+          <div class="subtitle">Industry-Leading AWS, Azure & GCP Training</div>
+          <p>Transform your career with our comprehensive cloud training programs.</p>
+          <div class="cta-group">
+            <a href="courses.html" class="cta-btn primary-cta">Start Learning Today</a>
+            <a href="#" class="cta-btn">View Curriculum</a>
+          </div>
+          <div class="features">
+            <div class="feature-card"><div class="feature-icon">🏆</div><h3>Expert Instructors</h3><p>Learn from AWS-certified professionals</p></div>
+            <div class="feature-card"><div class="feature-icon">💻</div><h3>Hands-On Labs</h3><p>Practice in real AWS environments</p></div>
+            <div class="feature-card"><div class="feature-icon">📊</div><h3>Career Support</h3><p>Resume guidance & job assistance</p></div>
+          </div>
+          <div class="stats-bar">
+            <div class="stat"><div class="stat-number">500+</div><div class="stat-label">Students Trained</div></div>
+            <div class="stat"><div class="stat-number">95%</div><div class="stat-label">Success Rate</div></div>
+            <div class="stat"><div class="stat-number">50+</div><div class="stat-label">Partner Companies</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide slide-2">
+        <div class="slide-content">
+          <h1>Launch Your IT Career</h1>
+          <div class="subtitle">Real-World Internship Experience</div>
+          <p>Bridge the gap between academic learning and industry demands.</p>
+          <div class="cta-group">
+            <a href="internship.html" class="cta-btn primary-cta">Apply for Internship</a>
+            <a href="#" class="cta-btn">Learn More</a>
+          </div>
+          <div class="features">
+            <div class="feature-card"><div class="feature-icon">🚀</div><h3>Live Projects</h3><p>Work on real-time industry projects</p></div>
+            <div class="feature-card"><div class="feature-icon">👥</div><h3>Team Collaboration</h3><p>Experience agile teamwork</p></div>
+            <div class="feature-card"><div class="feature-icon">📜</div><h3>Certification</h3><p>Completion certificate provided</p></div>
+          </div>
+          <div class="stats-bar">
+            <div class="stat"><div class="stat-number">3-6</div><div class="stat-label">Months Duration</div></div>
+            <div class="stat"><div class="stat-number">100%</div><div class="stat-label">Hands-On Experience</div></div>
+            <div class="stat"><div class="stat-number">85%</div><div class="stat-label">Job Placement</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide slide-3">
+        <div class="slide-content">
+          <h1>Scale Your Business</h1>
+          <div class="subtitle">End-to-End Digital Solutions</div>
+          <p>From cloud migration to custom web development and digital marketing.</p>
+          <div class="cta-group">
+            <a href="implementation.html" class="cta-btn primary-cta">Get Consultation</a>
+            <a href="#" class="cta-btn">View Portfolio</a>
+          </div>
+          <div class="features">
+            <div class="feature-card"><div class="feature-icon">☁️</div><h3>Cloud Solutions</h3><p>AWS, Azure, GCP migration</p></div>
+            <div class="feature-card"><div class="feature-icon">🌐</div><h3>Web Development</h3><p>Custom websites & SEO</p></div>
+            <div class="feature-card"><div class="feature-icon">📈</div><h3>Digital Marketing</h3><p>ROI-driven campaigns</p></div>
+          </div>
+          <div class="stats-bar">
+            <div class="stat"><div class="stat-number">100+</div><div class="stat-label">Projects Delivered</div></div>
+            <div class="stat"><div class="stat-number">24/7</div><div class="stat-label">Support</div></div>
+            <div class="stat"><div class="stat-number">99.9%</div><div class="stat-label">Uptime</div></div>
+          </div>
+        </div>
+    </div>
+    </div>
+    <button class="slider-arrows arrow-left" onclick="previousSlide()">‹</button>
+        <button class="slider-arrows arrow-right" onclick="nextSlide()">›</button>
+  </div>
+
+  <script>
+  const wrapper = document.getElementById('sliderWrapper');
+  const slides = document.querySelectorAll('.slide');
+  const totalSlides = slides.length;
+
+  let currentSlide = 1; // start at "first real slide" after prepending clone
+  let isTransitioning = false;
+
+  // Clone first and last slide
+  const firstClone = slides[0].cloneNode(true);
+  const lastClone = slides[totalSlides - 1].cloneNode(true);
+
+  // Add classes for debugging if needed
+  firstClone.classList.add("clone");
+  lastClone.classList.add("clone");
+
+  // Append/prepend
+  wrapper.appendChild(firstClone);
+  wrapper.insertBefore(lastClone, wrapper.firstChild);
+
+  // Update new slide count
+  const allSlides = document.querySelectorAll('.slide');
+  const newTotal = allSlides.length;
+
+  // Adjust wrapper width & each slide width
+  wrapper.style.width = `${newTotal * 100}%`;
+  allSlides.forEach(slide => {
+  slide.style.width = `${100 / newTotal}%`;
+  });
+
+  // Start at the "first real slide" (index 1, because of prepended clone)
+  wrapper.style.transform = `translateX(-${100 / newTotal}%)`;
+
+  function updateSlider() {
+    wrapper.style.transition = "transform 0.8s ease";
+    wrapper.style.transform = `translateX(-${currentSlide * (100 / newTotal)}%)`;
+  }
+
+  function nextSlide() {
+    if (isTransitioning) return;
+    isTransitioning = true;
+    currentSlide++;
+    updateSlider();
+
+    // If at fake last (clone of first), reset
+    if (currentSlide === newTotal - 1) {
+      setTimeout(() => {
+        wrapper.style.transition = "none";
+        currentSlide = 1;
+        wrapper.style.transform = `translateX(-${100 / newTotal}%)`;
+      }, 850);
+    }
+
+    setTimeout(() => (isTransitioning = false), 900);
+  }
+
+  function previousSlide() {
+    if (isTransitioning) return;
+    isTransitioning = true;
+    currentSlide--;
+    updateSlider();
+
+    // If at fake first (clone of last), reset
+    if (currentSlide === 0) {
+      setTimeout(() => {
+        wrapper.style.transition = "none";
+        currentSlide = newTotal - 2;
+        wrapper.style.transform = `translateX(-${currentSlide * (100 / newTotal)}%)`;
+      }, 850);
+    }
+
+    setTimeout(() => (isTransitioning = false), 900);
+  }
+
+  // Auto slide
+  setInterval(nextSlide, 4000);
+
+  // Optional: arrow controls
+  document.querySelector('.arrow-right')?.addEventListener('click', nextSlide);
+  document.querySelector('.arrow-left')?.addEventListener('click', previousSlide);
+</script>
+
+<!-- courses - Section -->
+
+<section id="courses" class="Services">
+  <h2 class="title heading-effect">Our Courses</h2>
+  <h2 class="title heading-effect">Pick A Course To Kickstart your career</h2>
+  <!-- <div class="underline"></div> -->
+
+  <div class="cards-container">
+    <div class="card">
+      <img src="gcp.png" alt="GCP image">
+      <div class="course-content">
+        <h3 class="course-title">GCP</h3>
+        <div class="course-rating">★★★★★ <span>(5.0 / 3 Ratings)</span></div>
+        <a href="gcp.html" class="enroll-btn">ENROLL</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="devops.png" alt="Devops Image">
+      <div class="course-content">
+        <h3 class="course-title">DEVOPS</h3>
+        <div class="course-rating">★★★★★ <span>(5.0 / 3 Ratings)</span></div>
+        <a href="devops.html" class="enroll-btn">ENROLL</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="AWS.jpg" alt="AWS image">
+      <div class="course-content">
+        <h3 class="course-title">AWS</h3>
+        <div class="course-rating">★★★★★ <span>(5.0 / 3 Ratings)</span></div>
+        <a href="aws.html" class="enroll-btn">ENROLL</a>
+      </div>
+      </div>
+    </div>
+
+    <div class="browse-btn-container">
+    <a href="courses.html" class="browse-btn">Browse Courses</a>
+    </div>
+   </section>
+
+
+<script>
+  // Select all cards
+  const cards = document.querySelectorAll('#courses .card');
+
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const cardElements = entry.target.querySelectorAll('.card');
+          cardElements.forEach((card, index) => {
+            // Add animation with delay for one-by-one effect
+            setTimeout(() => {
+              card.classList.add('animate');
+            }, index * 200); // 200ms delay between cards
+          });
+          observer.unobserve(entry.target); // stop observing after animation
+        }
+      });
+    },
+    { threshold: 0.3 } // Trigger when 30% of the section is visible
+  );
+
+  observer.observe(document.querySelector('#courses'));
+</script>
+
+<!-- services-section -->
+    <h2 class="services-heading"> Our Services </h2>
+
+<section id="services" class="services-section">
+  <div class="services-container">
+
+    <div class="service-item">
+      <div class="service-text">
+        <h3>Professional Training</h3>
+        <p>Master industry-ready skills with expert-led training in Cloud, DevOps, Data, and more. 
+           Our programs are designed to make you job-ready with hands-on projects.</p>
+        <a href="training.html" class="service-btn">Enroll Now</a>
+      </div>
+      <div class="service-icon">
+        <img src="Training.png" alt="Professional Training">
+      </div>
+    </div>
+
+    <div class="service-item">
+      <div class="service-text">
+        <h3>Internship Programs</h3>
+        <p>Gain real-world experience through guided internships. Work on live projects, 
+           collaborate with mentors, and build a strong professional portfolio.</p>
+        <a href="internship.html" class="service-btn">Apply Now</a>
+      </div>
+      <div class="service-icon">
+        <img src="Internship.png" alt="Internship">
+      </div>
+    </div>
+
+    <div class="service-item">
+      <div class="service-text">
+        <h3>Corporate Implementation</h3>
+        <p>We partner with companies to implement tailored IT solutions. 
+           From cloud adoption and DevOps automation to real-time project deployment, 
+           we ensure smooth execution that aligns with business goals.</p>
+        <a href="implementation.html" class="service-btn">Consult Now</a>
+      </div>
+      <div class="service-icon">
+        <img src="Implementation.png" alt="Corporate Implementation">
+      </div>
+    </div>
+
+  </div>
+</section>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const serviceItems = document.querySelectorAll('#services .service-item');
+
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate'); // slide-in text + image + float
+          observer.unobserve(entry.target); // stop observing once animated
+        }
+      });
+    },
+    { threshold: 0.3 } // trigger when 30% of item is visible
+  );
+
+  serviceItems.forEach(item => observer.observe(item));
+});
+</script>
+
+
+<!-- Get In Touch Section -->
+<section class="get-in-touch">
+  <div class="touch-item">
+    <p>Get In Touch:</p>
+    <h3>info@confideoit.com</h3>
+  </div>
+
+  <div class="touch-or">or</div>
+
+  <div class="touch-item">
+    <p>Call Us Via:</p>
+    <h3>817-988-6658</h3>
+  </div>
+</section>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const getInTouch = document.querySelector('.get-in-touch');
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate'); // trigger slide-in
+          observer.unobserve(entry.target);      // animate only once
+        }
+      });
+    },
+    { threshold: 0.3 } // trigger when 30% of the section is visible
+  );
+
+  observer.observe(getInTouch);
+});
+</script>
+
+<!-- stats-section -->
+<section class="stats-section" id="stats">
+  <h2 class="flash-text">Trusted by <span>1,000+ Students Alumni</span></h2>
+
+  <div class="stats">
+    <div class="stat-box">
+      <h3 class="counter" data-target="1000">0</h3>
+      <p>+ STUDENTS ENROLLED</p>
+    </div>
+
+    <div class="stat-box">
+      <h3 class="counter" data-target="100">0</h3>
+      <p>+ CLIENTS</p>
+    </div>
+
+    <div class="stat-box">
+      <h3 class="counter" data-target="99.9">0</h3>
+      <p>% SATISFACTION RATE</p>
+    </div>
+  </div>
+</section>
+
+  
+<script>
+/* Robust counter animation that triggers only when #stats scrolls into view.
+   Works for integers and decimals. Uses requestAnimationFrame for smoothness. */
+document.addEventListener("DOMContentLoaded", () => {
+  const statsSection = document.querySelector("#stats");
+  const counters = document.querySelectorAll(".counter");
+  let started = false; // ensure animation runs once
+
+  // time-based animator
+  function animateValue(el, start, end, duration) {
+    const isInteger = Number.isInteger(end);
+    const startTime = performance.now();
+
+    function frame(now) {
+      const elapsed = now - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      // easing (easeOutQuad)
+      const eased = 1 - (1 - progress) * (1 - progress);
+      const value = start + (end - start) * eased;
+
+      el.textContent = isInteger ? Math.floor(value).toLocaleString() : value.toFixed(1);
+
+      if (progress < 1) {
+        requestAnimationFrame(frame);
+      } else {
+        // ensure final value exactly matches target
+        el.textContent = isInteger ? end.toLocaleString() : end.toFixed(1);
+      }
+    }
+    requestAnimationFrame(frame);
+  }
+
+  function startCounters() {
+    if (started) return;
+    started = true;
+
+    counters.forEach(counter => {
+      const rawTarget = counter.getAttribute("data-target") || "0";
+      const target = parseFloat(rawTarget);
+      // choose duration depending on magnitude
+      const duration = (target >= 1000) ? 2200 : (target >= 100 ? 1800 : 1600);
+      animateValue(counter, 0, target, duration);
+    });
+  }
+
+  // IntersectionObserver to trigger when section is visible
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          startCounters();
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.4 }); // trigger when ~40% visible
+
+    if (statsSection) observer.observe(statsSection);
+  } else {
+    // fallback: if no IO support, check if already visible or start on scroll
+    if (isElementInViewport(statsSection)) startCounters();
+    window.addEventListener("scroll", () => {
+      if (!started && isElementInViewport(statsSection)) startCounters();
+    }, { passive: true });
+  }
+
+  // helper fallback
+  function isElementInViewport(el) {
+    if (!el) return false;
+    const rect = el.getBoundingClientRect();
+    return (
+      rect.top < (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.bottom >= 0
+    );
+  }
+
+  // If the section is already visible on load, start immediately
+  if (!started && isElementInViewport(statsSection)) {
+    startCounters();
+  }
+});
+</script>
+
+
+
+<!-- testimonials-section -->
+
+<section class="testimonials-section">
+  <h2 class="title">Testimonials</h2>
+  <div class="underline"></div>
+
+  <!-- CLIENT TESTIMONIALS -->
+  <div class="testimonials-container">
+    <!-- Left Side -->
+    <div class="testimonials-intro">
+      <h3>What Our Clients Say</h3>
+      <div class="underline"></div>
+      <p>Hear from our valued clients who have trusted us for their cloud, training, and digital needs.</p>
+    </div>
+
+    <!-- Right Side: Swiper Slider -->
+    <div class="swiper testimonials-slider">
+      <div class="swiper-wrapper">
+
+        <!-- Ramaiah Naidu -->
+        <div class="swiper-slide testimonial-card">
+          <div class="testimonial-logo monologo">RN</div>
+          <p class="testimonial-text">
+            “Confideo supported us with our AWS migration initiative. The team’s deep cloud expertise and seamless execution helped us transition smoothly. Highly satisfied with the results.”
+          </p>
+          <h4>🧑‍💼 Ramaiah Naidu</h4>
+          <span class="role">Co-founder, Srevens IT Staffing</span>
+        </div>
+
+        <!-- Rayudu -->
+        <div class="swiper-slide testimonial-card">
+          <div class="testimonial-logo monologo">R</div>
+          <p class="testimonial-text">
+            “Our students received hands-on training in Cloud and DevOps, and many achieved industry-recognized certifications. Confideo made a real difference in our campus upskilling journey.”
+          </p>
+          <h4>🎓 Rayudu</h4>
+          <span class="role">Training & Placement Head, ISTS College of Engineering</span>
+        </div>
+
+        <!-- Mohan Parvatha -->
+        <div class="swiper-slide testimonial-card">
+          <div class="testimonial-logo monologo">MP</div>
+          <p class="testimonial-text">
+            “Confideo was instrumental in setting up our cloud infrastructure. Their reliable support and technical guidance gave us a strong foundation to build on.”
+          </p>
+          <h4>🚀 Mohan Parvatha</h4>
+          <span class="role">Founder, Pramove</span>
+        </div>
+
+        <!-- Nagesh Ponnam -->
+        <div class="swiper-slide testimonial-card">
+          <div class="testimonial-logo monologo">NP</div>
+          <p class="testimonial-text">
+            “From building our website to driving digital marketing efforts, Confideo’s creative and technical support has been exceptional. Their team truly understands how to empower digital creators.”
+          </p>
+          <h4>🎬 Nagesh Ponnam</h4>
+          <span class="role">Founder, Jolly Tunes YouTube Channel</span>
+        </div>
+
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </div>
+
+  <!-- STUDENT TESTIMONIALS -->
+  <div class="testimonials-container mt-5">
+    <!-- Left Side -->
+    <div class="testimonials-intro">
+      <h3>What Our Students Say</h3>
+      <div class="underline"></div>
+      <p>“Hear from our students who turned learning into career opportunities with Confideo IT Services.”</p>
+    </div>
+
+    <!-- Right Side: Swiper Slider -->
+    <div class="swiper testimonials-slider">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide testimonial-card">
+          <div class="testimonial-logo monologo">PR</div>
+          <p class="testimonial-text">The course was helpful, able to pack lot of information by instructor.</p>
+          <div class="testimonial-rating">⭐️⭐️⭐️⭐️☆</div>
+          <h4>Pasham Rahul</h4>
+          <span class="role">Student</span>
+        </div>
+
+        <div class="swiper-slide testimonial-card">
+          <div class="testimonial-logo monologo">SS</div>
+          <p class="testimonial-text">Santhosh is highly knowledgeable and provided clear explanations...</p>
+          <div class="testimonial-rating">⭐️⭐️⭐️⭐️⭐️</div>
+          <h4>Srimanth Smart</h4>
+          <span class="role">Student</span>
+        </div>
+
+        <div class="swiper-slide testimonial-card">
+          <div class="testimonial-logo monologo">AK</div>
+          <p class="testimonial-text">Worth training .... 👍</p>
+          <div class="testimonial-rating">⭐️⭐️⭐️⭐️⭐️</div>
+          <h4>Atchuth Karthik</h4>
+          <span class="role">Student</span>
+        </div>
+
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </div>
+</section>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const intros = document.querySelectorAll('.testimonials-intro');
+
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate'); // slide up from bottom
+          observer.unobserve(entry.target);      // animate only once
+        }
+      });
+    },
+    { threshold: 0.3 } // trigger when 30% visible
+  );
+
+  intros.forEach(intro => observer.observe(intro));
+});
+</script>
+
+
+
+<section class="certificate-section">
+  <div class="certificate-wrap">
+    <div class="certificate-text">
+      <h2>CIS Certificate of Recognition</h2>
+      <p>
+        At <strong>CONFIDEOIT Services (CIS)</strong>, we believe in delivering 
+        innovative IT solutions with trust and excellence.  
+        Our certificate represents the quality, dedication, and expertise 
+        we bring to every project, empowering businesses to scale and succeed.
+      </p>
+      <a class="cta-btn" href="#services">Explore Our Services</a>
+    </div>
+
+    <div class="certificate-visual">
+      <!-- Replace src with your company certificate image -->
+      <img src="certificate.png" alt="CIS Company Certificate">
+    </div>
+  </div>
+</section>
+
+<style>
+  :root{
+    --navy:#071a3a;
+    --grid-size:40px;
+  }
+
+  body{
+    margin:0;
+    font-family: sans-serif;
+    background:#f6f7fb;
+  }
+
+  /* SECTION */
+  .certificate-section{
+    position:relative;
+    background:var(--navy);
+    color:#fff;
+    padding:80px 20px;
+    overflow:hidden;
+    background: radial-gradient(circle, #1a3d8f 0%,#03042c 100%);
+
+  }
+
+  /* GRID BACKGROUND with punch for right side */
+  .certificate-section::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px) !important;
+    background-size:var(--grid-size) var(--grid-size);
+    z-index:0;
+
+    /* Punch hole only for right certificate */
+    -webkit-mask-image: radial-gradient(
+      circle 280px at 78% 55%, 
+      transparent 70%, 
+      black 100%
+    );
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-composite: destination-out;
+
+    mask-image: radial-gradient(
+      circle 280px at 78% 55%, 
+      transparent 70%, 
+      black 100%
+    );
+    mask-repeat: no-repeat;
+  }
+
+  /* WRAP */
+  .certificate-wrap{
+    position:relative;
+    z-index:1;
+    max-width:1200px;
+    margin:0 auto;
+    display:flex;
+    align-items:center;
+    gap:48px;
+  }
+
+  /* LEFT */
+  .certificate-text{
+    flex:1 1 520px;
+    min-width:300px;
+  }
+  .certificate-text h2{
+    font-size:2.25rem;
+    margin:0 0 12px;
+    line-height:1.15;
+    font-family:sans-serif;
+    font-weight: bold;
+  }
+  .certificate-text p{
+    font-size:1.1rem;
+    opacity:.9;
+    margin:0 0 24px;
+    line-height:1.6;
+    font-family:sans-serif;
+  }
+  .cta-btn{
+    display:inline-block;
+    padding:12px 28px;
+    border-radius:30px;
+    background:linear-gradient(90deg,#4facfe,#00f2fe);
+    color:#fff;
+    text-decoration:none;
+    font-weight:600;
+    transition:transform .25s ease, box-shadow .25s ease;
+    font-family:sans-serif;
+  }
+  .cta-btn:hover{transform:translateY(-3px); box-shadow:0 8px 22px rgba(0,0,0,.35)}
+
+  /* RIGHT CERTIFICATE */
+  .certificate-visual{
+    flex:1 1 520px;
+    min-width:300px;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .certificate-visual img{
+    position:relative;
+    z-index:1;
+    width:min(95%, 460px);
+    height:auto;
+    border-radius:14px;
+    padding:12px;
+    box-shadow:0 12px 28px rgba(0,0,0,.55);
+background: transparent;
+    transform:translateY(120px);
+    opacity:0;
+    transition:transform 900ms cubic-bezier(.2,.65,.2,1), opacity 900ms cubic-bezier(.2,.65,.2,1);
+  }
+  .certificate-visual img.show{
+    transform:translateY(0);
+    opacity:1;
+  }
+  .certificate-text {
+  opacity: 0;
+  transform: translateX(-100px); /* start left */
+  transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+/* Animate class: visible and settled */
+.certificate-text.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+  /* RESPONSIVE */
+@media (max-width: 992px) {
+  /* Stack items vertically and remove flex sizing that causes big gaps */
+  .certificate-wrap {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 16px !important;
+  }
+
+  /* Remove flex-basis/min-width that created tall columns on mobile */
+  .certificate-text,
+  .certificate-visual {
+    flex: none !important;
+    width: 100% !important;
+    max-width: 720px !important;
+    min-width: 0 !important;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Make sure grid mask doesn't hide/affect the image */
+  .certificate-section::before {
+    -webkit-mask-image: none !important;
+    mask-image: none !important;
+    pointer-events: none !important;
+    background-size: var(--grid-size,40px) !important;
+  }
+
+  /* Force image to render inline, remove transforms and transitions */
+  .certificate-visual {
+    display: block !important;
+    overflow: visible !important;
+  }
+
+  .certificate-visual img {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    position: static !important;
+    margin: 0 auto !important;
+    width: 92% !important;
+    max-width: 420px !important;
+    height: auto !important;
+    padding: 0 !important;
+    box-shadow: 0 8px 18px rgba(0,0,0,.25) !important;
+    z-index: 5 !important;
+  }
+
+  /* Show text immediately, remove slide offset */
+  .certificate-text {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    padding: 0 12px !important;
+    margin-bottom: 6px !important;
+  }
+
+  /* Reduce overall padding so no big empty space */
+  .certificate-section {
+    padding: 20px 16px 22px 16px !important;
+  }
+
+  /* Smaller typography on mobile */
+  .certificate-text h2 { font-size: 1.6rem !important; line-height: 1.2 !important; margin-bottom: 8px !important; }
+  .certificate-text p  { font-size: 0.95rem !important; line-height: 1.45 !important; margin-bottom: 12px !important; }
+  .cta-btn { padding: 10px 18px !important; font-size: 0.95rem !important; border-radius: 26px !important; }
+
+  /* Safety: remove any leftover translate/translateX rules */
+  .certificate-visual, .certificate-visual *, .certificate-text, .certificate-text * {
+    transform: none !important;
+    translate: none !important;
+  }
+  .certificate-visual img { display:block; visibility:visible; }
+}
+
+  
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const certText = document.querySelector('.certificate-text');
+  const certImg = document.querySelector('.certificate-visual img');
+
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          certText.classList.add('show'); // slide in from left
+          certImg.classList.add('show');  // slide up from bottom
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.35 });
+
+    if(certText) io.observe(certText);
+    if(certImg) io.observe(certImg);
+  } else {
+    certText.classList.add('show');
+    certImg.classList.add('show');
+  }
+});
+</script>
+
+<!-- about section -->
+<section id="about" class="about-section py-5 mt-5">
+  <div class="container-fluid px-4">
+    <div class="row align-items-center">
+      
+      <!-- Left Image with Animation -->
+      <div class="col-12 col-md-5 text-center text-md-start left-col">
+        <img src="ConfideoIT.png" alt="About Image" class="about-image floating" />
+      </div>
+
+      <!-- Right Content -->
+      <div class="col-12 col-md-7 mt-4 mt-md-0 right-col">
+        <h6 class="section-subtitle">ABOUT US</h6>
+        <h2 class="about-title">
+          "Driving-<span>Innovation-Building </span>Talent"
+        </h2>
+        <p class="about-text mt-3">
+          “At Confideo IT, we don’t just deliver technology—we build solutions. Our focus is on empowering businesses with scalable, reliable, and innovative cloud and digital solutions, while equipping individuals with the right training to thrive in the future of technology.”
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Observe left column (image container)
+  const leftCol = document.querySelector('.col-md-5');
+  const rightCol = document.querySelector('.col-md-7');
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Slide in left image
+        const img = leftCol.querySelector('.about-image');
+        img.classList.add('show-left');
+
+        // Slide in right content
+        rightCol.querySelector('.section-subtitle').classList.add('show-right');
+        rightCol.querySelector('.about-title').classList.add('show-right');
+        rightCol.querySelector('.about-text').classList.add('show-right');
+
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  if(leftCol) observer.observe(leftCol);
+});
+</script>
+
+
+  <!-- Tie-Up Companies Section -->
+  <section class="tieup-section">
+    <!-- Left Text -->
+    <div class="tieup-content">
+      <h2>Our Esteemed Tie-Up Companies</h2>
+      <p>
+        We are proud to be partnered with industry-leading organizations that help 
+        us provide world-class opportunities and real-world exposure to our students.
+      </p>
+    </div>
+
+    <!-- Right Image -->
+    <div class="tieup-image">
+      <img src="partnersship.png" alt="Partnership illustration">
+    </div>
+  </section>
+
+  <!-- Floating White Card with Logos -->
+  <div id="#clients" class="logo-card">
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="akshara.png"></div>
+        <div class="swiper-slide"><img src="adarsh.png"></div>
+        <div class="swiper-slide"><img src="ists.png"></div>
+        <div class="swiper-slide"><img src="pramov.png"></div>
+        <div class="swiper-slide"><img src="srivens.png"></div>
+        <div class="swiper-slide"><img src="akshara.png"></div>
+        <div class="swiper-slide"><img src="adarsh.png"></div>
+        <div class="swiper-slide"><img src="ists.png"></div>
+      </div>
+    </div>
+  </div>
+
+   <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 4,
+      spaceBetween: 40,
+      loop: true,
+      speed: 3000,  // smooth scrolling speed
+      autoplay: {
+        delay: 0, // continuous scroll
+        disableOnInteraction: false,
+      },
+      breakpoints: {
+        0: { slidesPerView: 2 },
+        600: { slidesPerView: 3 },
+        900: { slidesPerView: 4 }
+      }
+    });
+  </script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const content = document.querySelector('.tieup-content');
+  const image = document.querySelector('.tieup-image');
+
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          content.classList.add('show'); // slide down from top
+          image.classList.add('show');   // slide up from bottom
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+
+    if(content) observer.observe(content);
+    if(image) observer.observe(image);
+  } else {
+    // fallback for older browsers
+    content.classList.add('show');
+    image.classList.add('show');
+  }
+});
+</script>
+
+
+
+<!-- form section -->
+
+  <section class="contact-section">
+    <!-- Left Side Image -->
+    <div class="left-section">
+      <img src="girly.png" alt="Student Image"> <!-- replace with your image (prefer PNG with transparency) -->
+    </div>
+
+    <!-- Right Side Form -->
+    <div class="right-section">
+      <h2>Enroll for <span class="highlight">Bright Career</span></h2>
+      <form id="enrollForm">
+        <input type="text" id="firstName" name="first_name" placeholder="Enter first name" required>
+        <input type="text" id="lastName" name="last_name" placeholder="Enter last name" required>
+        <input type="email" id="email" name="email" placeholder="Enter email address" required>
+        <input type="tel" id="contact" name="contact_number" placeholder="Enter contact number" required pattern="[0-9]{10}">
+
+        <!-- Program Type Dropdown -->
+        <select id="programType" name="program_type" required>
+          <option value="" disabled selected>Select Program Type</option>
+          <option value="Training">Training</option>
+          <option value="Internship">Internship</option>
+          <option value="Implementation">Implementation</option>
+        </select>
+
+        <!-- Training Section -->
+        <div id="trainingOptions" class="hidden">
+          <label>Select Training Course</label>
+          <select name="course_name" disabled>
+            <option value="Google Cloud Platform">Google Cloud Platform</option>
+            <option value="GenAI">GenAI</option>
+            <option value="DevOps">DevOps</option>
+            <option value="Data Engineering">Data Engineering</option>
+            <option value="Azure">Azure</option>
+            <option value="AWS">AWS</option>
+            <option value="Python">Python</option>
+          </select>
+        </div>
+
+        <!-- Internship Section -->
+        <div id="internshipOptions" class="hidden">
+          <label>Select Internship</label>
+          <select name="course_name" disabled>
+            <option value="Google Cloud Platform">Google Cloud Platform</option>
+            <option value="GenAI">GenAI</option>
+            <option value="DevOps">DevOps</option>
+            <option value="Data Engineering">Data Engineering</option>
+            <option value="Azure">Azure</option>
+            <option value="AWS">AWS</option>
+            <option value="Python">Python</option>
+          </select>
+        </div>
+
+        <!-- Implementation Section -->
+        <div id="implementationOptions" class="hidden">
+          <label>Select Implementation</label>
+          <select name="course_name" disabled>
+            <option value="Web Development">Web Development</option>
+            <option value="Cloud Solution">Cloud Solution</option>
+            <option value="Digital Marketing">Digital Marketing</option>
+          </select>
+        </div>
+
+        <button type="submit">Submit</button>
+        <!-- <button type="button" class="btn-cancel" id="cancelBtn">Cancel</button> -->
+      </form>
+    </div>
+  </section>
+
+  <script>
+  // Handle dropdown logic
+  const programType = document.getElementById("programType");
+  const trainingOptions = document.getElementById("trainingOptions");
+  const internshipOptions = document.getElementById("internshipOptions");
+  const implementationOptions = document.getElementById("implementationOptions");
+
+  let lastSelected = ""; // keep track of the last chosen option
+
+  programType.addEventListener("change", function () {
+    // If user selects the same option again → toggle it off
+    if (lastSelected === this.value) {
+      trainingOptions.classList.add("hidden");
+      internshipOptions.classList.add("hidden");
+      implementationOptions.classList.add("hidden");
+
+      // disable selects
+      trainingOptions.querySelector("select").disabled = true;
+      internshipOptions.querySelector("select").disabled = true;
+      implementationOptions.querySelector("select").disabled = true;
+
+      this.value = ""; // reset dropdown back to default
+      lastSelected = ""; // reset tracker
+      return;
+    }
+
+    // Hide all sections
+    trainingOptions.classList.add("hidden");
+    internshipOptions.classList.add("hidden");
+    implementationOptions.classList.add("hidden");
+
+    // Disable all selects
+    trainingOptions.querySelector("select").disabled = true;
+    internshipOptions.querySelector("select").disabled = true;
+    implementationOptions.querySelector("select").disabled = true;
+
+    // Show the newly selected one
+    if (this.value === "Training") {
+      trainingOptions.classList.remove("hidden");
+      trainingOptions.querySelector("select").disabled = false;
+    } else if (this.value === "Internship") {
+      internshipOptions.classList.remove("hidden");
+      internshipOptions.querySelector("select").disabled = false;
+    } else if (this.value === "Implementation") {
+      implementationOptions.classList.remove("hidden");
+      implementationOptions.querySelector("select").disabled = false;
+    }
+
+    lastSelected = this.value; // update tracker
+  });
+
+  // Cancel button reset
+  document.getElementById("cancelBtn").addEventListener("click", function () {
+    document.getElementById("enrollForm").reset();
+    trainingOptions.classList.add("hidden");
+    internshipOptions.classList.add("hidden");
+    implementationOptions.classList.add("hidden");
+
+    // disable selects
+    trainingOptions.querySelector("select").disabled = true;
+    internshipOptions.querySelector("select").disabled = true;
+    implementationOptions.querySelector("select").disabled = true;
+
+    lastSelected = ""; // reset tracker
+  });
+</script>
+<!-- for animation -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const left = document.querySelector(".left-section");
+    const right = document.querySelector(".right-section");
+
+    function revealOnScroll() {
+      const windowHeight = window.innerHeight;
+
+      [left, right].forEach(el => {
+        const position = el.getBoundingClientRect().top;
+        if (position < windowHeight - 100) {
+          el.classList.add("show");
+        }
+      });
+    }
+
+    window.addEventListener("scroll", revealOnScroll);
+    revealOnScroll();
+  });
+</script>
+<!-- Success Message -->
+  <div id="successMessage" style="display:none; text-align:center;">
+    <h2>Your enrollment has been successfully done ✅</h2>
+    <button id="newResponseBtn">Submit Another Response</button>
+  </div>
+
+  <script>
+    const form = document.getElementById("enrollForm");
+    const formContainer = document.getElementById("formContainer");
+    const successMessage = document.getElementById("successMessage");
+    const newResponseBtn = document.getElementById("newResponseBtn");
+    const cancelBtn = document.getElementById("cancelBtn");
+
+    // Handle form submission
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+       window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
+
+
+<!-- emailjs-logic -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("pw1e_6-oOqW74Wnk1");
+   })();
+</script>
+<script>
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
+  emailjs.sendForm('service_2m6as2s', 'template_9jspsmm', this)
+    .then(function(response) {
+      console.log('SUCCESS!', response.status, response.text);
+      formCard.classList.add('d-none');
+      successMessage.classList.remove('d-none');
+    }, function(error){
+      console.log('FAILED...', error);
+      alert('Something went wrong. Please try again.');
+    });
+});
+</script>
+
+
+
+
+
+  <!-- Footer -->
+  <!-- Contact Section -->
+<footer id="contact" class="footer">
+  <div class="footer-container">
+    <!-- Left Section -->
+    <div class="footer-left">
+      <img src="ConfideoIT.png" alt="CIS Logo" class="footer-logo">
+      <p>
+        “Confideo IT – Where solutions empower businesses and training empowers people.” </p>
+      <div class="social-links">
+        <a href="https://www.facebook.com/profile.php?id=61563414006847"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/confideoit/"><i class="fab fa-instagram"></i></a>
+        <a href="https://github.com/confideoit"><i class="fab fa-github "></i></a>
+        <a href="https://www.linkedin.com/company/confideo-it-services/posts/?feedView=all"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+
+    <!-- Right Section -->
+    <div class="footer-right">
+      <div>
+        <h3>About</h3>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <!-- <li><a href="#">News & Blogs</a></li> -->
+          <li><a href="#">Become a Teacher</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Quick Link</h3>
+        <ul>
+          <!-- <li><a href="#">Live Workshop</a></li> -->
+          <li><a href="#">Free Courses</a></li>
+          <li><a href="#">Admission</a></li>
+          <li><a href="#">Request a Demo</a></li>
+          <li><a href="#">Media Relations</a></li>
+          <li><a href="#">Students</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contact Info</h3>
+        <p>📞 817-988-6658</p>
+        <p>📧 info@confideoit.com</p>
+      </div>
+    </div>
+  </div>
+   <div class="footer-bottom">
+    <div class="footer-bottom-left">
+      © Copyright 2025. All Rights Reserved by <a href="https://confideoit.com">Confideo IT Services</a>
+    </div>
+    <div class="footer-bottom-right">
+      <a href="terms.html">Terms</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="support.html">Support</a>
+    </div>
+  </div>
+</footer>
+
+  <!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<!-- Font Awesome for icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+<script>
+  // Select all testimonial sliders and initialize separately
+  document.querySelectorAll(".testimonials-slider").forEach(slider => {
+    new Swiper(slider, {
+      slidesPerView: 2,
+      spaceBetween: 20,
+      loop: true,
+      autoplay: {
+        delay: 3000, // 3 seconds per slide
+        disableOnInteraction: false // keeps autoplay even after manual swipe
+      },
+      pagination: {
+        el: slider.querySelector(".swiper-pagination"),
+        clickable: true
+      },
+      navigation: {
+        nextEl: slider.querySelector(".swiper-button-next"),
+        prevEl: slider.querySelector(".swiper-button-prev")
+      },
+      breakpoints: {
+        0: { slidesPerView: 1 },
+        768: { slidesPerView: 2 }
+      }
+    });
+  });
+</script>
+<!-- company-section-script -->
+<script>
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 4,   // default for desktop
+  spaceBetween: 30,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  loop: true,
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+    320: { slidesPerView: 1 },   // 📱 Mobile
+    768: { slidesPerView: 2 },   // 📲 Tablet
+    1024: { slidesPerView: 4 }   // 💻 Desktop
+  }
+});
+</script>
+
+  <script>
+// Simple slider logic
+let index = 0;
+const images = document.querySelectorAll('.certificate-slider img');
+
+function showSlide() {
+  images.forEach((img, i) => img.style.display = i === index ? 'block' : 'none');
+  index = (index + 1) % images.length;
+}
+
+showSlide();
+setInterval(showSlide, 2000); // change every 2 sec
+</script>
+  
+
+
+<!-- Bootstrap JS with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- slider script -->
+ <script>
+  const el = document.getElementById('contentCarousel');
+  if (el) {
+    new bootstrap.Carousel(el, {
+      interval: 4000,
+      pause: false,
+      ride: 'carousel',
+      touch: true,
+      wrap: true
+    });
+  }
+</script>
+<!-- script for bubbles -->
+ <script>
+  function createBubble() {
+    const bubble = document.createElement("div");
+    const size = Math.random() * 60 + 20; // 20px - 80px
+    bubble.classList.add("bubble");
+    bubble.style.width = `${size}px`;
+    bubble.style.height = `${size}px`;
+    bubble.style.left = `${Math.random() * 100}vw`;
+    bubble.style.animationDuration = `${Math.random() * 10 + 10}s`; // 10s - 20s
+
+    // 🎨 Random colors
+    const colors = [
+      "rgba(79, 70, 229, 0.25)",   // purple
+      "rgba(236, 72, 153, 0.25)",  // pink
+      "rgba(59, 130, 246, 0.25)",  // blue
+      "rgba(16, 185, 129, 0.25)",  // teal/green
+      "rgba(245, 158, 11, 0.25)"   // orange
+    ];
+    bubble.style.background = colors[Math.floor(Math.random() * colors.length)];
+
+    document.querySelector(".bubbles").appendChild(bubble);
+
+    // Remove bubble after animation
+    setTimeout(() => {
+      bubble.remove();
+    }, 20000);
+  }
+
+  // Generate bubbles every 500ms
+  setInterval(createBubble, 500);
+</script>
+
+
+</body>
+</html>

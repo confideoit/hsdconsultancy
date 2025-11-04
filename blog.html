@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Course Blogs</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="blog.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    /* small tweaks so the demo looks neat */
+    .left-col { border-right: 1px solid #e6e6e6; min-height: 200vh; background:#fafafa; }
+    .course-card img, .blog-card img { object-fit: cover; height:160px; width:100%; }
+    .course-list .list-group-item { cursor: pointer; color: rgb(59, 56, 56); }
+    .course-card { max-width: 100%; }
+    .carousel .card { border: 0; }
+  </style>
+</head>
+<body>
+
+  <header class="sticky-top z-index-fixed">
+  <nav class="navbar navbar-dark navbar-expand-md">
+    <div class="container-fluid">
+      <!-- brand (left) -->
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="ConfideoIT.png" alt="CIS Logo" height="40" />
+      </a>
+
+      <!-- hamburger (right) -->
+      <button class="navbar-toggler ms-auto" type="button"
+              data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- links -->
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <!-- your li/a items -->
+           <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="courses.html">Courses</a></li>
+        <!-- Dropdown for Services -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle text-white"
+   href="#"
+   id="servicesDropdown"
+   role="button"
+   data-bs-toggle="dropdown"
+   aria-expanded="false"
+   onclick="document.querySelector('#').scrollIntoView({behavior: 'smooth'});">
+   Services
+</a>
+      <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+               <li><a class="dropdown-item" href="implementation.html">Implementation</a></li>
+
+        <li><a class="dropdown-item" href="training.html">Training</a></li>
+        <li><a class="dropdown-item" href="internship.html">Internships</a></li>
+        <li><a class="dropdown-item" href="workshops.html">Workshops</a></li>
+        <li><a class="dropdown-item" href="realtime-projects.html">Real Time Projects</a></li>
+      </ul>
+    </li>
+        <li class="nav-item"><a class="nav-link text-white" href="#clients">Clients</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="blog.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="contact.html">ContactUs</a></li>
+    
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div style="padding-top: 80px;" class="container-fluid mt-3">
+    <div class="row">
+      <!-- Left Sidebar -->
+      <div class="col-lg-2 col-md-3 col-12 left-col">
+        <ul id="courseList" class="course-list"></ul>
+      </div>
+
+      <!-- Middle Blogs -->
+      <div class="col-lg-7 col-md-6 col-12 middle-col">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h5 style="font-weight: bold; color:blue" id="courseTitle">Courses</h5>
+          <a id="viewAllBtn" href="#" class="btn btn-primary btn-sm">View All</a>
+        </div>
+        <div class="row" id="blogContainer"></div>
+      </div>
+
+      <!-- Right Sidebar -->
+      <div class="col-lg-3 col-md-3 col-12 right-col">
+        <h4 style="font-weight: bold; text-align:center; margin-top:30px; margin-bottom:30px; color:blue">Get in Touch</h4>
+        <form id="contactForm" class="mb-4">
+          <div class="mb-3"><input name="fullname" type="text" class="form-control" placeholder="Full Name" required></div>
+          <div class="mb-3"><input name="email" type="email" class="form-control" placeholder="Email" required></div>
+          <div class="mb-3"><input name="mobile" type="tel" class="form-control" placeholder="Mobile" required></div>
+          <div class="mb-3"><textarea name="message" class="form-control" rows="4" placeholder="Your Message" required></textarea></div>
+          <button class="btn btn-success w-100" type="submit">Submit</button>
+        </form>
+
+        <h4 style="font-weight: bold ; text-align:center; margin-top:60px; margin-bottom:30px; color:blue">Trending Courses</h4>
+        <div id="courseCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner" id="carouselContent"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <style>
+    /* Left sidebar default (desktop/tablet) */
+    .left-col { 
+      border-right: 1px solid #e6e6e6; 
+      min-height: 100vh; 
+      background:#fafafa; 
+    }
+    .course-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .course-list li {
+      padding: 10px 14px;
+      border-bottom: 1px solid #eee;
+      cursor: pointer;
+      color: #3b3838;
+      font-weight: 500;
+    }
+    .course-list li.active {
+      background: #007bff;
+      color: #fff;
+      border-radius: 4px;
+    }
+    .blog-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 4px;
+      margin-bottom: 10px;
+      background-color: #f8f8f8;
+    }
+
+        /* Mobile: make it horizontal scroll */
+    @media (max-width: 768px) {
+      .left-col {
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+    background: #fff;
+    min-height: auto;
+    margin-bottom: 20px !important;
+  }
+
+  .course-list {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    gap: 8px;
+    padding: 6px 12px;
+    margin: 0;
+    list-style: none;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  .course-list li {
+    flex: 0 0 auto;
+    padding: 6px 14px;
+    border-radius: 25px;
+    background: #f4f6f9;
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: all 0.2s ease-in-out;
+    border: 1px solid #e0e0e0;
+  }
+
+  .course-list li:hover {
+    background: #e6f0ff;
+    color: #0056b3;
+  }
+
+  .course-list li.active {
+    background: #007bff;
+    color: #fff;
+    border: 1px solid #007bff;
+  }
+
+  /* Hide ugly scrollbar but keep scroll functionality */
+  .course-list::-webkit-scrollbar {
+    display: none;
+  }
+.card-body {
+  justify-content:center;
+   align-items:center ;
+   text-align:center
+}
+
+}
+  </style>
+
+
+<footer id="contact" class="footer">
+  <div class="footer-container">
+    <!-- Left Section -->
+    <div class="footer-left">
+      <img src="ConfideoIT.png" alt="CIS Logo" class="footer-logo">
+      <p>
+        “Confideo IT – Where solutions empower businesses and training empowers people.” </p>
+      <div class="social-links">
+        <a href="https://www.facebook.com/profile.php?id=61563414006847"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/confideoit/"><i class="fab fa-instagram"></i></a>
+        <a href="https://github.com/confideoit"><i class="fab fa-github "></i></a>
+        <a href="https://www.linkedin.com/company/confideo-it-services/posts/?feedView=all"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+
+    <!-- Right Section -->
+    <div class="footer-right">
+      <div>
+        <h3>About</h3>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <!-- <li><a href="#">News & Blogs</a></li> -->
+          <li><a href="#">Become a Teacher</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Quick Link</h3>
+        <ul>
+          <!-- <li><a href="#">Live Workshop</a></li> -->
+          <li><a href="#">Free Courses</a></li>
+          <li><a href="#">Admission</a></li>
+          <li><a href="#">Request a Demo</a></li>
+          <li><a href="#">Media Relations</a></li>
+          <li><a href="#">Students</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contact Info</h3>
+        <p>📞 817-988-6658</p>
+        <p>📧 info@confideoit.com</p>
+      </div>
+    </div>
+  </div>
+   <div class="footer-bottom">
+    <div class="footer-bottom-left">
+      © Copyright 2025. All Rights Reserved by <a href="https://confideoit.com">Confideo IT Services</a>
+    </div>
+    <div class="footer-bottom-right">
+      <a href="terms.html">Terms</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="support.html">Support</a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+  emailjs.init('JeA5VL-uQxlPo1E0s'); // Replace with your EmailJS public key
+
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const formData = {
+      fullname: this.fullname.value,
+      email: this.email.value,
+      mobile: this.mobile.value,
+      message: this.message.value
+    };
+
+    emailjs.send('service_x6iafst', 'template_ni0qdme', formData)
+      .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
+        alert('Your message was sent successfully!');
+        this.reset();
+      }, (error) => {
+        console.error('FAILED...', error);
+        alert('Oops! Something went wrong. Please try again later.');
+      });
+  });
+</script>
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // global
+  let coursesData = null;
+
+  // DOM refs
+  const courseListEl = document.getElementById('courseList');
+  const blogContainer = document.getElementById('blogContainer');
+  const courseTitleEl = document.getElementById('courseTitle');
+  const viewAllBtn = document.getElementById('viewAllBtn');
+  const carouselContent = document.getElementById('carouselContent');
+
+  // safe escape
+  function escapeHtml(str = '') {
+    return String(str).replace(/[&<>"']/g, s => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[s]));
+  }
+
+  function slugify(text) {
+    return text.toString().toLowerCase().trim().replace(/\s+/g,'-').replace(/[^\w\-]+/g,'');
+  }
+
+  // load JSON
+  fetch('courses.json')
+    .then(res => {
+      if (!res.ok) throw new Error('Could not load courses.json');
+      return res.json();
+    })
+    .then(data => {
+      coursesData = data;
+      buildLeftList(data.courses);
+      buildCarousel(data.courses);
+      // select first course by default
+      const first = data.courses[0];
+      if (first) selectCourse(first.id);
+    })
+    .catch(err => {
+      console.error(err);
+      // fallback: show a friendly message
+      document.getElementById('blogContainer').innerHTML = '<div class="col-12"><p class="text-danger">Failed to load course data. Check courses.json and run via a local server.</p></div>';
+    });
+
+  // Build left sidebar list
+  function buildLeftList(list) {
+    courseListEl.innerHTML = '';
+    list.forEach((c, i) => {
+      const li = document.createElement('li');
+      li.className = 'list-group-item' + (i === 0 ? ' active' : '');
+      li.dataset.courseId = c.id;
+      li.innerHTML = `<strong>${escapeHtml(c.name)}</strong>`;
+      li.addEventListener('click', () => {
+        // set active
+        Array.from(courseListEl.children).forEach(x => x.classList.remove('active'));
+        li.classList.add('active');
+        selectCourse(c.id);
+      });
+      courseListEl.appendChild(li);
+    });
+  }
+
+  // Render first N blogs of a course
+  function loadBlogsForCourse(courseId, firstN = 4) {
+    const course = (coursesData && coursesData.courses.find(x => x.id === courseId));
+    if (!course) { blogContainer.innerHTML = '<div class="col-12">No blogs found</div>'; return; }
+    courseTitleEl.textContent = `${course.name} Blogs`;
+    viewAllBtn.href = `blog_course.html?id=${encodeURIComponent(course.id)}`;
+
+    blogContainer.innerHTML = '';
+    const blogs = course.blogs.slice(0, firstN);
+    blogs.forEach(blog => {
+      const blogId = blog.id || slugify(blog.title);
+      const col = document.createElement('div');
+      col.className = 'col-md-6 mb-3';
+      col.innerHTML = `
+        <div class="card blog-card h-100 shadow-sm">
+          <img src="${escapeHtml(blog.image)}" class="card-img-top" alt="${escapeHtml(blog.title)}">
+          <div class="card-body d-flex flex-column">
+            <h6 class="card-title mb-2">${escapeHtml(blog.title)}</h6>
+            <p class="card-text flex-grow-1">${escapeHtml(blog.excerpt || blog.content || '').slice(0,180)}${(blog.excerpt || blog.content).length > 180 ? '...' : ''}</p>
+            <div class="mt-2">
+              <a href="blog_data.html?course=${encodeURIComponent(course.id)}&blog=${encodeURIComponent(blogId)}" class="btn btn-sm btn-primary">Read More</a>
+            </div>
+          </div>
+        </div>`;
+      blogContainer.appendChild(col);
+    });
+  }
+
+  // build right carousel
+  function buildCarousel(list) {
+  carouselContent.innerHTML = '';
+  list.forEach((c, idx) => {
+    const activeClass = idx === 0 ? 'active' : '';
+    const courseFile = c.file || `${c.id}.html`;
+    carouselContent.innerHTML += `
+      <div class="carousel-item ${activeClass}">
+        <div class="card course-card">
+          <img src="${escapeHtml(c.image)}" class="card-img-top" alt="${escapeHtml(c.name)}">
+          <div class="card-body d-flex flex-column">
+            <h6 class="text-center mb-2">${escapeHtml(c.name)}</h6>
+            <a href="${escapeHtml(courseFile)}" class="btn btn-sm btn-outline-primary mx-auto mt-2" style="padding: 0.5rem 1rem;">See More</a>
+          </div>
+        </div>
+      </div>`;
+  });
+}
+
+
+
+  // when a course is selected
+  function selectCourse(courseId) {
+    if (!coursesData) return;
+    const course = coursesData.courses.find(x => x.id === courseId);
+    if (!course) return;
+    loadBlogsForCourse(courseId, 4);
+  }
+});
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

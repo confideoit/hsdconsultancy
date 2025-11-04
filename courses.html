@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Training</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Close Button -->
+<!-- <a href="javascript:void(0);" class="close-btn" onclick="goBack()">×</a> -->
+
+
+<!-- header -->
+<header class="sticky-top z-index-fixed">
+  <nav class="navbar navbar-dark navbar-expand-md">
+    <div class="container-fluid">
+      <!-- brand (left) -->
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="ConfideoIT.png" alt="CIS Logo" height="40" />
+      </a>
+
+      <!-- hamburger (right) -->
+      <button class="navbar-toggler ms-auto" type="button"
+              data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- links -->
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <!-- your li/a items -->
+          <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="courses.html">Courses</a></li>
+        <!-- Dropdown for Services -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle text-white"
+   href="#"
+   id="servicesDropdown"
+   role="button"
+   data-bs-toggle="dropdown"
+   aria-expanded="false"
+   onclick="document.querySelector('#').scrollIntoView({behavior: 'smooth'});">
+   Services
+</a>
+      <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                <li><a class="dropdown-item" href="implementation.html">Implementation</a></li>
+
+        <li><a class="dropdown-item" href="training.html">Training</a></li>
+        <li><a class="dropdown-item" href="internship.html">Internships</a></li>
+        <li><a class="dropdown-item" href="workshops.html">Workshops</a></li>
+        <li><a class="dropdown-item" href="realtime-projects.html">Real Time Projects</a></li>
+      </ul>
+    </li>
+        <li class="nav-item"><a class="nav-link text-white" href="index.html">Clients</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="blog.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="contact.html">ContactUs</a></li>
+    
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- All Courses in one section -->
+<section class="courses">
+  <h2>Courses</h2>
+  <div class="underline"></div>
+
+  <div class="cards-container">
+    <!-- GCP -->
+    <div class="course-card">
+      <img src="gcp.png" alt="GCP image">
+      <div class="course-content">
+        <h3 class="course-title">GCP</h3>
+        <div class="course-rating">★★★★★ <span>(5.0 / 3 Ratings)</span></div>
+        <a href="gcp.html" class="enroll-btn">ENROLL</a>
+      </div>
+    </div>
+
+    <!-- DevOps -->
+    <div class="course-card">
+      <img src="devops.png" alt="DevOps image">
+      <div class="course-content">
+        <h3 class="course-title">DevOps</h3>
+        <div class="course-rating">★★★★★ <span>(5.0 / 3 Ratings)</span></div>
+        <a href="devops.html" class="enroll-btn">ENROLL</a>
+      </div>
+    </div>
+
+    <!-- AWS -->
+    <div class="course-card">
+      <img src="AWS.jpg" alt="AWS image">
+      <div class="course-content">
+        <h3 class="course-title">AWS</h3>
+        <div class="course-rating">★★★★★ <span>(5.0 / 3 Ratings)</span></div>
+        <a href="aws.html" class="enroll-btn">ENROLL</a>
+      </div>
+    </div>
+
+    <!-- Azure -->
+    <div class="course-card">
+      <img src="azure.png" alt="Azure image">
+      <div class="course-content">
+        <h3 class="course-title">AZURE</h3>
+        <div class="course-rating">★★★★★ <span>(5.0 / 3 Ratings)</span></div>
+        <a href="azure.html" class="enroll-btn">ENROLL</a>
+      </div>
+    </div>
+
+    <!-- GenAI -->
+    <div class="course-card">
+      <img src="genAI.png" alt="GenAI image">
+      <div class="course-content">
+        <h3 class="course-title">GenAI</h3>
+        <div class="course-rating">★★★★★ <span>(5.0 / 3 Ratings)</span></div>
+        <a href="genai.html" class="enroll-btn">ENROLL</a>
+      </div>
+    </div>
+
+    <!-- Python -->
+    <div class="course-card">
+      <img src="python.png" alt="Python image">
+      <div class="course-content">
+        <h3 class="course-title">PYTHON</h3>
+        <div class="course-rating">★★★★★ <span>(5.0 / 3 Ratings)</span></div>
+        <a href="python.html" class="enroll-btn">ENROLL</a>
+      </div>
+    </div>
+
+    <!-- Data Engineering -->
+    <div class="course-card">
+      <img src="dataengineering.png" alt="Data Engineering">
+      <div class="course-content">
+        <h3 class="course-title">DATA ENGINEERING</h3>
+        <div class="course-rating">★★★★★ <span>(5.0 / 3 Ratings)</span></div>
+        <a href="dataengineering.html" class="enroll-btn">ENROLL</a>
+      </div>
+    </div>
+
+    <!-- Add more courses easily here -->
+  </div>
+</section>
+
+<!-- Footer -->
+<footer id="contact" class="footer">
+  <div class="footer-container">
+    <div class="footer-left">
+      <img src="ConfideoIT.png" alt="CIS Logo" class="footer-logo">
+      <p>“Confideo IT – Where solutions empower businesses and training empowers people.”</p>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+    <div class="footer-right">
+      <div>
+        <h3>About</h3>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="#">Become a Teacher</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Quick Link</h3>
+        <ul>
+          <li><a href="#">Free Courses</a></li>
+          <li><a href="#">Admission</a></li>
+          <li><a href="#">Request a Demo</a></li>
+          <li><a href="#">Media Relations</a></li>
+          <li><a href="#">Students</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contact Info</h3>
+        <p>📞 817-988-6658</p>
+        <p>📧 info@confideoit.com</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-bottom-left">
+      © Copyright 2025. All Rights Reserved by <a href="https://confideoit.com">Confideo IT Services</a>
+    </div>
+    <div class="footer-bottom-right">
+      <a href="terms.html">Terms</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="support.html">Support</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Styles -->
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f9f9f9;
+  }
+
+  /* Close Button */
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    text-decoration: none;
+    color: #333;
+    z-index: 1000;
+  }
+  .close-btn:hover {
+    color: red;
+  }
+
+  /* Courses Section */
+  .courses {
+    margin: 40px auto;
+    text-align: center;
+    padding: 20px;
+    max-width: 1400px;
+  }
+  .courses h2 {
+    margin-bottom: 20px;
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+
+  /* Cards Grid */
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+  }
+
+  /* Each Course Card */
+  .course-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    transition: transform .2s ease, box-shadow .2s ease;
+    margin-bottom: 40px;
+  }
+
+  .course-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 40px 20px rgba(0,0,0,0.2);
+  }
+
+  .course-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+
+  .course-content {
+    padding: 15px;
+  }
+
+  .course-title {
+    font-size: 20px;
+    margin: 10px 0;
+    color: #222 !important;
+    font-weight: bold;
+  }
+
+  .course-rating {
+    font-size: 14px;
+    color: #f4c542;
+    margin-bottom: 8px;
+  }
+  .course-rating span {
+    color: #555;
+    font-size: 13px;
+  }
+
+  /* Enroll Button */
+  .enroll-btn {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 10px 18px;
+    background: #007BFF;
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.2s ease;
+    font-size: 15px;
+  }
+  .enroll-btn:hover {
+    background: #0056b3;
+  }
+</style>
+
+<script>
+function goBack() {
+  if (document.referrer !== "") {
+    window.history.back();
+  } else {
+    window.location.href = "index.html";
+  }
+}
+</script>
+
+</body>
+</html>

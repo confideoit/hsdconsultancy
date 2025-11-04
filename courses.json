@@ -1,0 +1,145 @@
+{
+  "courses": [
+    {
+      "id": "aws",
+      "name": "Amazon Web Services",
+      "image": "AWS.jpg",
+      "blogs": [
+        {
+          "id": "getting-started",
+          "title": "Getting Started with AWS",
+          "image": "images/AWS.jpg",
+          "excerpt": "Intro to AWS basics."
+        },
+        {
+          "id": "ec2-guide",
+          "title": "AWS EC2 Guide",
+          "image": "images/aws-ec2.png",
+          "excerpt": "Deep dive into EC2."
+        },
+        {
+          "id": "s3-bucket",
+          "title": "AWS S3 Bucket Explained",
+          "image": "images/aws-s3.png",
+          "excerpt": "Learn cloud storage."
+        },
+        {
+          "id": "lambda",
+          "title": "AWS Lambda Functions",
+          "image": "images/aws-lambda.png",
+          "excerpt": "Serverless computing."
+        },
+        {
+          "id": "iam-roles",
+          "title": "AWS IAM Roles",
+          "image": "images/aws-iam.png",
+          "excerpt": "Security and roles."
+        },
+        {
+          "id": "rds-setup",
+          "title": "AWS RDS Setup",
+          "image": "images/aws-rds.png",
+          "excerpt": "Relational DB in cloud."
+        },
+        {
+          "id": "cloudformation",
+          "title": "AWS CloudFormation",
+          "image": "images/aws-cf.png",
+          "excerpt": "Infra as code."
+        }
+      ]
+    },
+
+    {
+      "id": "azure",
+      "name": "Azure",
+      "image": "azure.png",
+      "blogs": [
+        { "id": "intro", "title": "Intro to Azure", "image": "azure.png", "excerpt": "Azure fundamentals." },
+        { "id": "vm-setup", "title": "Azure VM Setup", "image": "images/azure-vm.jpeg", "excerpt": "Create and manage VMs." },
+        { "id": "blob-storage", "title": "Azure Blob Storage", "image": "images/azure-bs.jpeg", "excerpt": "Handle large data." },
+        { "id": "functions", "title": "Azure Functions", "image": "images/azure-func.jpeg", "excerpt": "Serverless Azure apps." },
+        { "id": "ad-basics", "title": "Azure AD Basics", "image": "images/azure-ad.jpeg", "excerpt": "Identity management." },
+        { "id": "sql-db", "title": "Azure SQL Database", "image": "images/azure-db.jpeg", "excerpt": "Managed SQL service." },
+        { "id": "aks", "title": "Azure Kubernetes Service", "image": "images/azure-aks.jpeg", "excerpt": "Container orchestration." }
+      ]
+    },
+
+    {
+  "id": "dataengineering",
+  "name": "Data Engineering",
+  "image": "dataengineering.png",
+  "blogs": [
+    { "id": "basics", "title": "Data Eng Basics", "image": "dataengineering.png", "excerpt": "ETL pipelines intro." },
+    { "id": "big-data-tools", "title": "Big Data Tools", "image": "images/de-bd.jpeg", "excerpt": "Hadoop & Spark." },
+    { "id": "data-warehousing", "title": "Data Warehousing", "image": "images/de-dwh.jpeg", "excerpt": "Snowflake, Redshift." },
+    { "id": "streaming", "title": "Streaming Data", "image": "images/de-stream.jpeg", "excerpt": "Kafka real-time." },
+    { "id": "airflow", "title": "Airflow Workflows", "image": "images/de-af.jpeg", "excerpt": "Pipeline orchestration." },
+    { "id": "data-lake", "title": "Data Lake Design", "image": "images/de-dld.jpeg", "excerpt": "Store raw data." },
+    { "id": "quality", "title": "Data Quality", "image": "images/de-dq.jpeg", "excerpt": "Ensuring accuracy." }
+  ]
+},
+
+{
+  "id": "python",
+  "name": "Python",
+  "image": "python.png",
+  "blogs": [
+    { "id": "basics", "title": "Python Basics", "image": "python.png", "excerpt": "Learn syntax & vars." },
+    { "id": "oop", "title": "OOP in Python", "image": "images/py-oop.jpeg", "excerpt": "Classes and objects." },
+    { "id": "file-handling", "title": "Python File Handling", "image": "images/py-fh.jpeg", "excerpt": "Read/write files." },
+    { "id": "web-dev", "title": "Python Web Dev", "image": "images/py-webdev.jpeg", "excerpt": "Flask & Django intro." },
+    { "id": "data-science", "title": "Python Data Science", "image": "images/py-ds.jpeg", "excerpt": "NumPy & Pandas." },
+    { "id": "ai", "title": "Python for AI", "image": "images/py-ai.jpeg", "excerpt": "ML with Python." },
+    { "id": "automation", "title": "Python Automation", "image": "images/py-aut.jpeg", "excerpt": "Scripts to save time." }
+  ]
+},
+
+{
+  "id": "devops",
+  "name": "DevOps",
+  "image": "devops.png",
+  "blogs": [
+    { "id": "intro", "title": "DevOps Intro", "image": "devops.png", "excerpt": "Culture & practices." },
+    { "id": "cicd", "title": "CI/CD Basics", "image": "images/devops-cicd.jpeg", "excerpt": "Jenkins pipelines." },
+    { "id": "docker", "title": "Docker for Beginners", "image": "images/devops-docker.jpeg", "excerpt": "Container basics." },
+    { "id": "kubernetes", "title": "Kubernetes Overview", "image": "images/devops-kub.jpeg", "excerpt": "Cluster management." },
+    { "id": "terraform", "title": "Terraform IaC", "image": "images/devops-terraform.jpeg", "excerpt": "Infra automation." },
+    { "id": "monitoring", "title": "Monitoring Tools", "image": "images/devops-mon.jpeg", "excerpt": "Prometheus & Grafana." },
+    { "id": "security", "title": "DevOps Security", "image": "images/devops-sec.jpeg", "excerpt": "SecOps practices." }
+  ]
+},
+
+{
+  "id": "genai",
+  "name": "GenAI",
+  "image": "genAI.png",
+  "blogs": [
+    { "id": "basics", "title": "What is GenAI?", "image": "genAI.png", "excerpt": "Basics of AI models." },
+    { "id": "llms", "title": "LLMs Explained", "image": "images/genai-llm.jpeg", "excerpt": "Large Language Models." },
+    { "id": "business", "title": "GenAI in Business", "image": "images/genai-bus.jpeg", "excerpt": "Practical use cases." },
+    { "id": "ethics", "title": "AI Ethics", "image": "images/genai-ethics.jpeg", "excerpt": "Responsible AI." },
+    { "id": "prompts", "title": "Prompt Engineering", "image": "images/genai-promptE.jpeg", "excerpt": "Better AI outputs." },
+    { "id": "apis", "title": "GenAI APIs", "image": "images/genai-apis.jpeg", "excerpt": "Integrating AI tools." },
+    { "id": "future", "title": "Future of GenAI", "image": "images/genai-future.jpeg", "excerpt": "What’s next in AI?" }
+  ]
+},
+
+{
+  "id": "gcp",
+  "name": "GCP",
+  "image": "gcp.png",
+  "blogs": [
+    { "id": "intro", "title": "Getting Started GCP", "image": "gcp.png", "excerpt": "Google Cloud basics." },
+    { "id": "compute", "title": "GCP Compute Engine", "image": "images/gcp-ce.jpeg", "excerpt": "VM instances." },
+    { "id": "storage", "title": "GCP Storage", "image": "images/gcp-cs.jpeg", "excerpt": "Cloud storage service." },
+    { "id": "bigquery", "title": "BigQuery Basics", "image": "images/gcp-bq.jpeg", "excerpt": "Data warehouse." },
+    { "id": "ai", "title": "GCP AI Tools", "image": "images/gcp-gc.jpeg", "excerpt": "AI & ML services." },
+    { "id": "gke", "title": "Kubernetes on GCP", "image": "images/gcp-kub.jpeg", "excerpt": "GKE overview." },
+    { "id": "networking", "title": "Networking in GCP", "image": "images/gcp-net.jpeg", "excerpt": "VPCs explained." }
+  ]
+}
+
+    
+  ]
+}

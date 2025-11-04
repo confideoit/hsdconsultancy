@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Download Brochure Form</title>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f4f8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .form-container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      width: 400px;
+      max-width: 90%;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+      text-align: center;
+    }
+
+    .form-container h2 {
+      color: #3b82f6;
+      margin-bottom: 20px;
+    }
+
+    .form-container input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 15px;
+    }
+
+    .form-container button {
+      width: 100%;
+      padding: 12px;
+      background: #3b82f6;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: background 0.3s ease;
+    }
+
+    .form-container button:hover {
+      background: #2563eb;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Download Brochure</h2>
+    <form id="brochureForm">
+      <input type="text" name="fullname" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <input type="tel" name="mobile" placeholder="Mobile Number" required>
+      <button type="submit">Submit & Download</button>
+    </form>
+  </div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+  <!-- <script>
+    // ✅ Initialize EmailJS
+    (function(){
+      emailjs.init("JeA5VL-uQxlPo1E0s"); // replace with your EmailJS public key
+    })();
+
+    document.getElementById("brochureForm").addEventListener("submit", function(e){
+      e.preventDefault();
+
+      // Collect form data
+      let formData = {
+        fullname: this.fullname.value,
+        email: this.email.value,
+        mobile: this.mobile.value
+      };
+
+      // ✅ Send email using EmailJS
+      emailjs.send("service_x6iafst", "template_3xwwy9j", formData)
+        .then(function(response) {
+          console.log("SUCCESS!", response.status, response.text);
+
+          // ✅ After email sent, trigger download
+          let link = document.createElement("a");
+          link.href = "AWS.pdf"; // replace with actual brochure file path
+          link.download = "AWS_Brochure";
+          link.click();
+
+          alert("Thank you! The brochure is downloading.");
+        }, function(error) {
+          console.log("FAILED...", error);
+          alert("Oops! Something went wrong. Please try again.");
+        });
+    });
+  </script> -->
+
+<script>
+  // Get query parameter value
+  function getQueryParam(param) {
+    let urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(param);
+  }
+
+  let brochureFile = getQueryParam("file") || "default.pdf"; // fallback if not provided
+
+  (function(){
+    emailjs.init("JeA5VL-uQxlPo1E0s"); // your EmailJS public key
+  })();
+
+  document.getElementById("brochureForm").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    let formData = {
+      fullname: this.fullname.value,
+      email: this.email.value,
+      mobile: this.mobile.value
+    };
+
+    emailjs.send("service_x6iafst", "template_3xwwy9j", formData)
+      .then(function(response) {
+        console.log("SUCCESS!", response.status, response.text);
+
+        // ✅ Trigger dynamic download
+        let link = document.createElement("a");
+        link.href = brochureFile;
+        link.download = brochureFile.split("/").pop(); 
+        link.click();
+
+        alert("Thank you! The brochure is downloading.");
+      }, function(error) {
+        console.log("FAILED...", error);
+        alert("Oops! Something went wrong. Please try again.");
+      });
+  });
+</script>
+
+
+</body>
+</html>
