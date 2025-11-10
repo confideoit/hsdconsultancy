@@ -34,7 +34,7 @@ header {
   width: 100%;
   z-index: 999;
   /* background-color: #03042c; */
-        background: radial-gradient(circle, #1a3d8f 0%,#03042c 100%);
+background: radial-gradient(circle, #4B4B4B 0%, #202020 70%, #F97316 100%);
 
 }
 .navbar {
@@ -131,7 +131,7 @@ header {
     margin-bottom: 40px;
     margin-top: 65px;
     overflow: hidden;
-    background: radial-gradient(circle, #1a3d8f 0%, #071a3a 100%);
+background: radial-gradient(circle, #4B4B4B 0%, #202020 70%, #F97316 100%);
 }
 
 .hero-section h1 {
@@ -197,9 +197,9 @@ header {
             font-weight: 700;
         }
         h2 {
-            color: #4f46e5;
+            color: #F97316;
             margin-bottom: 20px;
-            border-bottom: 3px solid #4f46e5;
+            border-bottom: 3px solid #4B4B4B;
             padding-bottom: 10px;
             font-weight: bold;
         }
@@ -318,7 +318,7 @@ header {
 }
 
 .faq-section h2 {
-    color: #4f46e5;
+    color: #F97316;
     margin-bottom: 30px;
     text-align: start;
     font-weight: bold;
@@ -340,7 +340,7 @@ header {
     font-weight: 600;
     font-size: 1.1rem;
     color: white;
-    background: radial-gradient(circle, #1a3d8f 0%, #071a3a 100%);
+background: radial-gradient(circle, #4B4B4B 0%, #202020 70%, #F97316 100%);
 }
 
 /* Arrow icon */
@@ -379,7 +379,7 @@ header {
         /* footer-section */
 .footer {
   /* background-color: #03042c; */
-        background: radial-gradient(circle, #1a3d8f 0%,#03042c 100%);
+background: radial-gradient(circle, #4B4B4B 0%, #202020 70%, #F97316 100%);
 
   color: white;
   padding: 40px 0;

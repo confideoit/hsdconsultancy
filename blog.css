@@ -50,7 +50,7 @@ header {
   width: 100%;
   z-index: 999;
   /* background-color: #03042c; */
-    background: radial-gradient(circle, #1a3d8f 0%,#03042c 100%);
+background: radial-gradient(circle, #4B4B4B 0%, #202020 70%, #F97316 100%);
 
 }
 .navbar {
@@ -94,7 +94,7 @@ header {
 /* footer-section */
 .footer {
   /* background-color: #03042c; */
-          background: radial-gradient(circle, #1a3d8f 0%,#03042c 100%);
+background: radial-gradient(circle, #4B4B4B 0%, #202020 70%, #F97316 100%);
 
   color: white;
   padding: 40px 0;
